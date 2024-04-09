@@ -6,8 +6,4 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="wwwroot\assets\vendors\boxicons\.github\FUNDING.yml" />
-  </ItemGroup>
-
 </Project>
