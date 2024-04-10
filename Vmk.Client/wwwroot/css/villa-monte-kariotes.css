@@ -445,11 +445,11 @@ section {
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
-..portfolio .portfolio-item {
+.gallery .gallery-item {
     margin-bottom: 30px;
 }
 
-.portfolio #portfolio-flters {
+.gallery #gallery-flters {
     padding: 0;
     margin: 0 auto 35px auto;
     list-style: none;
@@ -459,7 +459,7 @@ section {
     padding: 2px 15px;
 }
 
-    .portfolio #portfolio-flters li {
+    .gallery #gallery-flters li {
         cursor: pointer;
         display: inline-block;
         padding: 10px 15px 8px 15px;
@@ -472,23 +472,23 @@ section {
         transition: all 0.3s ease-in-out;
     }
 
-        .portfolio #portfolio-flters li:hover,
-        .portfolio #portfolio-flters li.filter-active {
+        .gallery #gallery-flters li:hover,
+        .gallery #gallery-flters li.filter-active {
             color: #149ddd;
         }
 
-        .portfolio #portfolio-flters li:last-child {
+        .gallery #gallery-flters li:last-child {
             margin-right: 0;
         }
 
-.portfolio .portfolio-wrap {
+.gallery .gallery-wrap {
     transition: 0.3s;
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
 
-    .portfolio .portfolio-wrap::before {
+    .gallery .gallery-wrap::before {
         content: "";
         background: rgba(255, 255, 255, 0.5);
         position: absolute;
@@ -501,7 +501,7 @@ section {
         opacity: 0;
     }
 
-    .portfolio .portfolio-wrap .portfolio-links {
+    .gallery .gallery-wrap .gallery-links {
         opacity: 1;
         left: 0;
         right: 0;
@@ -513,7 +513,7 @@ section {
         justify-content: center;
     }
 
-        .portfolio .portfolio-wrap .portfolio-links a {
+        .gallery .gallery-wrap .gallery-links a {
             color: #fff;
             font-size: 28px;
             text-align: center;
@@ -522,15 +522,15 @@ section {
             width: 50%;
         }
 
-            .portfolio .portfolio-wrap .portfolio-links a:hover {
+            .gallery .gallery-wrap .gallery-links a:hover {
                 background: rgba(20, 157, 221, 0.95);
             }
 
-            .portfolio .portfolio-wrap .portfolio-links a + a {
+            .gallery .gallery-wrap .gallery-links a + a {
                 border-left: 1px solid #37b3ed;
             }
 
-    .portfolio .portfolio-wrap:hover::before {
+    .gallery .gallery-wrap:hover::before {
         top: 0;
         left: 0;
         right: 0;
@@ -538,7 +538,7 @@ section {
         opacity: 1;
     }
 
-    .portfolio .portfolio-wrap:hover .portfolio-links {
+    .gallery .gallery-wrap:hover .gallery-links {
         opacity: 1;
         bottom: 0;
     }
@@ -546,20 +546,20 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-.portfolio-details {
+.gallery-details {
     padding-top: 40px;
 }
 
-    .portfolio-details .portfolio-details-slider img {
+    .gallery-details .gallery-details-slider img {
         width: 100%;
     }
 
-    .portfolio-details .portfolio-details-slider .swiper-pagination {
+    .gallery-details .gallery-details-slider .swiper-pagination {
         margin-top: 20px;
         position: relative;
     }
 
-        .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+        .gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet {
             width: 12px;
             height: 12px;
             background-color: #fff;
@@ -567,16 +567,16 @@ section {
             border: 1px solid #149ddd;
         }
 
-        .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+        .gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet-active {
             background-color: #149ddd;
         }
 
-    .portfolio-details .portfolio-info {
+    .gallery-details .gallery-info {
         padding: 30px;
         box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
     }
 
-        .portfolio-details .portfolio-info h3 {
+        .gallery-details .gallery-info h3 {
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 20px;
@@ -584,27 +584,27 @@ section {
             border-bottom: 1px solid #eee;
         }
 
-        .portfolio-details .portfolio-info ul {
+        .gallery-details .gallery-info ul {
             list-style: none;
             padding: 0;
             font-size: 15px;
         }
 
-            .portfolio-details .portfolio-info ul li + li {
+            .gallery-details .gallery-info ul li + li {
                 margin-top: 10px;
             }
 
-    .portfolio-details .portfolio-description {
+    .gallery-details .gallery-description {
         padding-top: 30px;
     }
 
-        .portfolio-details .portfolio-description h2 {
+        .gallery-details .gallery-description h2 {
             font-size: 26px;
             font-weight: 700;
             margin-bottom: 20px;
         }
 
-        .portfolio-details .portfolio-description p {
+        .gallery-details .gallery-description p {
             padding: 0;
         }
 

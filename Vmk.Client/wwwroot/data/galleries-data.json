@@ -1,0 +1,63 @@
+[
+  {
+    "Id": "interior",
+    "Name": "Interior",
+    "Description": null,
+    "IsVible": true,
+    "SortNumber": 1000,
+    "Photos": [
+      {
+        "Id": 1001,
+        "FileName": "interior-01.jpg",
+        "OriginalFileName": "DSC_1000.JPG",
+        "Description": "",
+        "IsVisible": true,
+        "SortNumber": 1000
+      }
+    ]
+  },
+  {
+    "DSC_1166": null,
+    "Id": "exterior",
+    "Name": "Exterior",
+    "Description": null,
+    "IsVible": true,
+    "SortNumber": 1000,
+    "Photos": [
+      {
+        "Id": 2001,
+        "FileName": "exterior-01.jpg",
+        "OriginalFileName": "DSC_1166.JPG",
+        "Description": "",
+        "IsVisible": true,
+        "SortNumber": 1000
+      }
+    ]
+  },
+  {
+    "Id": "samothrace",
+    "Name": "Samothrace",
+    "Description": null,
+    "IsVible": true,
+    "SortNumber": 1000,
+    "Photos": [
+      {
+        "Id": 3001,
+        "FileName": "samothrace-01.jpg",
+        "OriginalFileName": null,
+        "Description": "",
+        "IsVisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 3001,
+        "FileName": "samothrace-02.jpg",
+        "OriginalFileName": null,
+        "Description": "",
+        "IsVisible": true,
+        "SortNumber": 1000
+      }
+    ]
+  }
+]
+
