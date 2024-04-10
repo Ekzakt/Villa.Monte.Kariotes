@@ -12,7 +12,7 @@ public class Gallery
 
     public string Description { get; set; }
 
-    public bool IsVisible { get; set; }
+    public bool IsInvisible { get; set; }
 
     public int SortNumber { get; set; } = 1000;
 

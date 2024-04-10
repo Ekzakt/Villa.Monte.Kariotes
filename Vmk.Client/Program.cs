@@ -1,5 +1,5 @@
-using Microsoft.Extensions.FileProviders;
 using Vmk.Application.Contracts;
+using Vmk.Client.Configuration;
 using Vmk.Infrastructure.Services;
 
 namespace Vmk.Client;
@@ -10,14 +10,11 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        IFileProvider physicalProvider = new PhysicalFileProvider(Directory.GetCurrentDirectory());
-
-        builder.Services.AddSingleton<IFileProvider>(physicalProvider);
-
         builder.Services.AddRazorPages();
+        builder.Services.AddFileProvider();
+        builder.Services.AddScoped<IFileReader, FileReader>();
         builder.Services.AddScoped<IGalleryService, GalleryService>();
-
-
+        builder.Services.AddScoped<ITestimonialService, TestimonialService>();
 
         var app = builder.Build();
 

@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Logging;
-using System.Text.Json;
+﻿using Microsoft.Extensions.Logging;
 using Vmk.Application.Contracts;
 using Vmk.Application.Models;
 
@@ -8,41 +6,38 @@ namespace Vmk.Infrastructure.Services;
 
 public class GalleryService : IGalleryService
 {
-    private const string ROOT_DATA_PATH = "wwwroot/data";
+    private const string DATA_FILE_NAME = "galleries-data.json";
 
     private readonly ILogger<GalleryService> _logger;
-    private readonly IFileProvider _fileProvider;
+    private readonly IFileReader _fileReader;
+
 
     public GalleryService(
         ILogger<GalleryService> logger,
-        IFileProvider fileProvider)
+        IFileReader fileReader)
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-        _fileProvider = fileProvider ?? throw new ArgumentNullException(nameof(fileProvider));
+        _fileReader = fileReader ?? throw new ArgumentNullException(nameof(fileReader));
+    }
+    
+
+    public async Task<List<Gallery>?> GatAllAsync(CancellationToken cancellationToken = default)
+    {
+        var galleries = await _fileReader.GetDataAsync<List<Gallery>>(DATA_FILE_NAME);
+
+        return galleries;
     }
 
-    public async Task<List<Gallery>?> GatAllAsync(CancellationToken cancellation = default)
+
+    public async Task<List<Gallery>?> GetVisibleAsync(CancellationToken cancellationToken = default)
     {
-        var fileInfo = _fileProvider.GetFileInfo(Path.Combine(ROOT_DATA_PATH, "galleries-data.json"));
+        var galleries = await GatAllAsync(cancellationToken);
 
-        if (!fileInfo.Exists)
-        {
-            return null;
+        if (galleries is null)
+        { 
+            return null; 
         }
 
-        try
-        {
-            var galleriesString = await File.ReadAllTextAsync(fileInfo?.PhysicalPath!);
-            var galleries = JsonSerializer.Deserialize<List<Gallery>>(galleriesString);
-
-            galleries = galleries?.FindAll(x => x.IsVisible == true);
-
-            return galleries;
-        }
-        catch (Exception ex)
-        {
-            _logger.LogWarning(ex, "Error while retrieving galleries data.");
-            return null;
-        }
+        return galleries.FindAll(x => x.IsInvisible == false);
     }
 }

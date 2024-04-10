@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Vmk.Application.Contracts;
-using Vmk.Application.Models;
 
 namespace Vmk.Client.Pages
 {
@@ -8,20 +7,26 @@ namespace Vmk.Client.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         private readonly IGalleryService _galleryService;
+        private readonly ITestimonialService _testimonialService;
 
         public IndexModel(
             ILogger<IndexModel> logger,
-            IGalleryService galleryService)
+            IGalleryService galleryService,
+            ITestimonialService testimonialService)
         {
-            _logger = logger;
-            _galleryService = galleryService;
+            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _galleryService = galleryService ?? throw new ArgumentNullException(nameof(galleryService));
+            _testimonialService = testimonialService ?? throw new ArgumentNullException(nameof(testimonialService));
         }
 
-        public async void OnGet()
+
+        public async Task OnGet()
         {
-            var galleries = await _galleryService.GatAllAsync();
+            var galleries = await _galleryService.GetVisibleAsync();
+            var testimonials = await _testimonialService.GetVisibleAsync();
 
             ViewData["Galleries"] = galleries ?? [];
+            ViewData["Testimonials"] = testimonials ?? [];
         }
     }
 }

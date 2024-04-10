@@ -4,5 +4,7 @@ namespace Vmk.Application.Contracts;
 
 public interface IGalleryService
 {
-    Task<List<Gallery>?> GatAllAsync(CancellationToken cancellation = default);
+    Task<List<Gallery>?> GatAllAsync(CancellationToken cancellationToken = default);
+
+    Task<List<Gallery>?> GetVisibleAsync(CancellationToken cancellationToken = default);
 }
