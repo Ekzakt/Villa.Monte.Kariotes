@@ -6,7 +6,7 @@ public class Photo
 {
     public int Id { get; set; }
 
-    public string FileName { get; set; }
+    public string RootName { get; set; }
 
     public string OriginalFileName { get; set; }
 
@@ -15,4 +15,8 @@ public class Photo
     public bool IsVisible { get; set; }
 
     public int SortNumber { get; set; } = 1000;
+
+    public string FileName => $"{RootName}.jpg";
+
+    public string FileNameSquare => $"{RootName}-sq.jpg";
 }

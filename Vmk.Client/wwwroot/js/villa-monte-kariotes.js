@@ -128,22 +128,6 @@
     });
 
     /**
-     * Hero type effect
-     */
-    //const typed = select('.typed')
-    //if (typed) {
-    //    let typed_strings = typed.getAttribute('data-typed-items')
-    //    typed_strings = typed_strings.split(',')
-    //    new Typed('.typed', {
-    //        strings: typed_strings,
-    //        loop: false,
-    //        typeSpeed: 75,
-    //        backSpeed: 50,
-    //        backDelay: 2000
-    //    });
-    //}
-
-    /**
      * Skills animation
      */
     let skilsContent = select('.skills-content');

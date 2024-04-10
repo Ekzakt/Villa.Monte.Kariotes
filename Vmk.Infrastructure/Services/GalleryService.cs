@@ -35,6 +35,8 @@ public class GalleryService : IGalleryService
             var galleriesString = await File.ReadAllTextAsync(fileInfo?.PhysicalPath!);
             var galleries = JsonSerializer.Deserialize<List<Gallery>>(galleriesString);
 
+            galleries = galleries?.FindAll(x => x.IsVisible == true);
+
             return galleries;
         }
         catch (Exception ex)

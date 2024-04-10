@@ -3,12 +3,12 @@
     "Id": "interior",
     "Name": "Interior",
     "Description": null,
-    "IsVible": true,
+    "IsVisible": true,
     "SortNumber": 1000,
     "Photos": [
       {
         "Id": 1001,
-        "FileName": "interior-01.jpg",
+        "RootName": "interior-01",
         "OriginalFileName": "DSC_1000.JPG",
         "Description": "",
         "IsVisible": true,
@@ -17,16 +17,15 @@
     ]
   },
   {
-    "DSC_1166": null,
     "Id": "exterior",
     "Name": "Exterior",
     "Description": null,
-    "IsVible": true,
+    "IsVisible": true,
     "SortNumber": 1000,
     "Photos": [
       {
         "Id": 2001,
-        "FileName": "exterior-01.jpg",
+        "RootName": "exterior-01",
         "OriginalFileName": "DSC_1166.JPG",
         "Description": "",
         "IsVisible": true,
@@ -38,23 +37,23 @@
     "Id": "samothrace",
     "Name": "Samothrace",
     "Description": null,
-    "IsVible": true,
+    "IsVisible": false,
     "SortNumber": 1000,
     "Photos": [
       {
         "Id": 3001,
-        "FileName": "samothrace-01.jpg",
+        "RootName": "samothrace-01",
         "OriginalFileName": null,
         "Description": "",
-        "IsVisible": true,
+        "IsVisible": false,
         "SortNumber": 1000
       },
       {
         "Id": 3001,
-        "FileName": "samothrace-02.jpg",
+        "RootName": "samothrace-02",
         "OriginalFileName": null,
         "Description": "",
-        "IsVisible": true,
+        "IsVisible": false,
         "SortNumber": 1000
       }
     ]
