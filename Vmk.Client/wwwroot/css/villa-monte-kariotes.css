@@ -233,7 +233,6 @@ h6 {
         background: rgba(5, 13, 24, 0.3);
         bottom: 0;
         content: "";
-        font-weight: lighter;
         position: absolute;
         top: 0;
         left: 0;
@@ -403,43 +402,47 @@ section {
                 color: #1f5297;
             }
 
+
 /*--------------------------------------------------------------
-# Skills
+# Resrvations
 --------------------------------------------------------------*/
-.skills .progress {
-    height: 60px;
-    display: block;
-    background: none;
-    border-radius: 0;
+.reservations {
+    /*background: url("../img/villa-monte-kariotes-bg-01.jpg") top center;*/
+    background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/villa-monte-kariotes-reservations-bg.jpg") bottom center;
+    overflow-x: hidden;
+    padding: 60px 0;
+    background-color: blue;
 }
 
-    .skills .progress .skill {
-        padding: 0;
-        margin: 0 0 6px 0;
-        text-transform: uppercase;
-        display: block;
-        font-weight: 600;
-        font-family: "Poppins", sans-serif;
-        color: #050d18;
+    .reservations h3 {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 700;
     }
 
-        .skills .progress .skill .val {
-            float: right;
-            font-style: normal;
+    .reservations p {
+        color: #fff;
+    }
+
+    .reservations .reservations-btn {
+        font-family: "Raleway", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 8px 28px;
+        border-radius: 4px;
+        transition: 0.5s;
+        margin-top: 10px;
+        border: 2px solid #fff;
+        color: #fff;
+    }
+
+        .reservations .reservations-btn:hover {
+            background: #ffc451;
+            border-color: #ffc451;
+            color: #151515;
         }
-
-.skills .progress-bar-wrap {
-    background: #dce8f8;
-    height: 10px;
-}
-
-.skills .progress-bar {
-    width: 1px;
-    height: 10px;
-    transition: 0.9s;
-    background-color: #0092cc;
-}
-
 
 /*--------------------------------------------------------------
 # Gallery
@@ -543,7 +546,7 @@ section {
     }
 
 /*--------------------------------------------------------------
-# GAllery Details
+# Gallery Details
 --------------------------------------------------------------*/
 .gallery-details {
     padding-top: 40px;
@@ -606,6 +609,69 @@ section {
         .gallery-details .gallery-description p {
             padding: 0;
         }
+
+
+/*--------------------------------------------------------------
+# Your Stay
+--------------------------------------------------------------*/
+.your-stay .your-stay-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #050d18;
+}
+
+.your-stay .your-stay-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #1f5297;
+    position: relative;
+}
+
+    .your-stay .your-stay-item h4 {
+        line-height: 18px;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-family: "Poppins", sans-serif;
+        color: #050d18;
+        margin-bottom: 10px;
+    }
+
+    .your-stay .your-stay-item h5 {
+        font-size: 16px;
+        background: #e4edf9;
+        padding: 5px 15px;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .your-stay .your-stay-item ul {
+        padding-left: 20px;
+    }
+
+        .your-stay .your-stay-item ul li {
+            padding-bottom: 10px;
+        }
+
+    .your-stay .your-stay-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .your-stay .your-stay-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -9px;
+        top: 0;
+        background: #fff;
+        border: 2px solid #1f5297;
+    }
+
 
 /*--------------------------------------------------------------
 # Testimonials
