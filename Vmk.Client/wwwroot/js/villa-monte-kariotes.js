@@ -128,22 +128,6 @@
     });
 
     /**
-     * Hero type effect
-     */
-    //const typed = select('.typed')
-    //if (typed) {
-    //    let typed_strings = typed.getAttribute('data-typed-items')
-    //    typed_strings = typed_strings.split(',')
-    //    new Typed('.typed', {
-    //        strings: typed_strings,
-    //        loop: false,
-    //        typeSpeed: 75,
-    //        backSpeed: 50,
-    //        backDelay: 2000
-    //    });
-    //}
-
-    /**
      * Skills animation
      */
     let skilsContent = select('.skills-content');
@@ -164,25 +148,25 @@
      * Porfolio isotope and filter
      */
     window.addEventListener('load', () => {
-        let portfolioContainer = select('.portfolio-container');
-        if (portfolioContainer) {
-            let portfolioIsotope = new Isotope(portfolioContainer, {
-                itemSelector: '.portfolio-item'
+        let galleryContainer = select('.gallery-container');
+        if (galleryContainer) {
+            let galleryIsotope = new Isotope(galleryContainer, {
+                itemSelector: '.gallery-item'
             });
 
-            let portfolioFilters = select('#portfolio-flters li', true);
+            let galleryFilters = select('#gallery-flters li', true);
 
-            on('click', '#portfolio-flters li', function (e) {
+            on('click', '#gallery-flters li', function (e) {
                 e.preventDefault();
-                portfolioFilters.forEach(function (el) {
+                galleryFilters.forEach(function (el) {
                     el.classList.remove('filter-active');
                 });
                 this.classList.add('filter-active');
 
-                portfolioIsotope.arrange({
+                galleryIsotope.arrange({
                     filter: this.getAttribute('data-filter')
                 });
-                portfolioIsotope.on('arrangeComplete', function () {
+                galleryIsotope.on('arrangeComplete', function () {
                     AOS.refresh()
                 });
             }, true);
@@ -191,16 +175,16 @@
     });
 
     /**
-     * Initiate portfolio lightbox 
+     * Initiate gallery lightbox 
      */
-    const portfolioLightbox = GLightbox({
-        selector: '.portfolio-lightbox'
+    const galleryLightbox = GLightbox({
+        selector: '.gallery-lightbox'
     });
 
     /**
      * Portfolio details slider
      */
-    new Swiper('.portfolio-details-slider', {
+    new Swiper('.gallery-details-slider', {
         speed: 400,
         loop: true,
         autoplay: {
