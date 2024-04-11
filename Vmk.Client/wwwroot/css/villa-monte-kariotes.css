@@ -84,9 +84,8 @@ h6 {
 }
 
     #header .profile img {
-        margin: 15px auto;
+        padding: 18px 15px;
         display: block;
-        width: 120px;
     }
 
     #header .profile h1 {
@@ -363,36 +362,36 @@ section {
     padding-bottom: 30px;
 }
 
-    .accomodations .count-box {
+    .accomodations .accomodation-box {
         margin: 12px 0;
         padding: 30px;
         width: 100%;
     }
 
-        .accomodations .count-box i {
-            display: block;
-            font-size: 44px;
-            color: #0092cc;
-            float: left;
-            line-height: 0;
-        }
+    .accomodations .accomodation-box i {
+        display: block;
+        font-size: 44px;
+        color: #0092cc;
+        float: left;
+        line-height: 0;
+    }
 
-        .accomodations .count-box span {
-            font-size: 48px;
-            line-height: 0;
-            display: block;
-            font-weight: 700;
-            color: #050d18;
-            margin-left: 60px;
-        }
+    .accomodations .accomodation-box span {
+        font-size: inherit;
+        line-height: 0;
+        display: block;
+        font-weight: 700;
+        color: #050d18;
+        margin-left: 60px;
+    }
 
-        .accomodations .count-box p {
-            padding: 0;
-            margin: -20px 0 0 60px;
-            font-family: "Raleway", sans-serif;
-            font-size: 14px;
-            color: #122f57;
-        }
+    .accomodations .accomodation-box p {
+        padding: 0;
+        margin: -20px 0 0 60px;
+        font-family: "Raleway", sans-serif;
+        font-size: inherit;
+        color: #122f57;
+    }
 
 
 /*--------------------------------------------------------------
