@@ -311,8 +311,11 @@ section {
         }
 
     .section-title p {
-        margin-bottom: 0;
+        margin-bottom: 1rem;
     }
+        .section-title p:last-child{
+            margin-bottom: 0;
+        }
 
 /*--------------------------------------------------------------
 # About
@@ -330,12 +333,15 @@ section {
 
     .about .content ul li {
         margin-bottom: 20px;
-        display: flex;
+        display: block;
         align-items: center;
     }
 
+    .about .content ul li p{
+        margin-left: 26px;
+    }
     .about .content ul strong {
-        margin-right: 10px;
+        margin-right: 5px;
     }
 
     .about .content ul i {
@@ -358,6 +364,7 @@ section {
 }
 
     .accomodations .count-box {
+        margin: 12px 0;
         padding: 30px;
         width: 100%;
     }
@@ -372,7 +379,7 @@ section {
 
         .accomodations .count-box span {
             font-size: 48px;
-            line-height: 40px;
+            line-height: 0;
             display: block;
             font-weight: 700;
             color: #050d18;
@@ -380,30 +387,16 @@ section {
         }
 
         .accomodations .count-box p {
-            padding: 15px 0 0 0;
-            margin: 0 0 0 60px;
+            padding: 0;
+            margin: -20px 0 0 60px;
             font-family: "Raleway", sans-serif;
             font-size: 14px;
             color: #122f57;
         }
 
-        .accomodations .count-box a {
-            font-weight: 600;
-            display: block;
-            margin-top: 20px;
-            color: #122f57;
-            font-size: 15px;
-            font-family: "Poppins", sans-serif;
-            transition: ease-in-out 0.3s;
-        }
-
-            .accomodations .count-box a:hover {
-                color: #1f5297;
-            }
-
 
 /*--------------------------------------------------------------
-# Resrvations
+# Reservations
 --------------------------------------------------------------*/
 .reservations {
     background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/villa-monte-kariotes-reservations-bg-01.jpg") bottom center;
@@ -422,24 +415,36 @@ section {
         color: #fff;
     }
 
+    .reservations .img-thumbnail{
+        padding: 0.025rem;
+        max-width: 200px;
+    }
+
     .reservations .reservations-btn {
-        font-family: sans-serif;
-        font-weight: 600;
+        background-color: green;
+        font-weight: 500;
         font-size: 16px;
         letter-spacing: 1px;
-        display: inline-block;
-        padding: 8px 28px;
+        display: inline-flex;
+        padding: 4px 16px;
         border-radius: 4px;
         transition: 0.5s;
         margin-top: 10px;
-        border: 2px solid #fff;
+        border: 1px solid #fff;
         color: #fff;
+        align-content: baseline;
     }
-
+        .reservations .reservations-btn i {
+            font-size: 2.2rem;
+            padding: 5px 5px;
+        }
+        .reservations .reservations-btn span.phone{
+            padding-top: 10px;
+        }
         .reservations .reservations-btn:hover {
-            background: #ffc451;
-            border-color: #ffc451;
-            color: #151515;
+            background: #0092cc;
+            border-color: #fff;
+            color: #fff;
         }
 
 /*--------------------------------------------------------------
