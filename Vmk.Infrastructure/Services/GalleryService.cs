@@ -25,6 +25,11 @@ public class GalleryService : IGalleryService
     {
         var galleries = await _fileReader.GetDataAsync<List<Gallery>>(DATA_FILE_NAME);
 
+        galleries = galleries?
+            .OrderBy(x => x.SortNumber)
+            .ThenBy(x => x.Name)
+            .ToList();
+
         return galleries;
     }
 
@@ -33,11 +38,9 @@ public class GalleryService : IGalleryService
     {
         var galleries = await GatAllAsync(cancellationToken);
 
-        if (galleries is null)
-        { 
-            return null; 
-        }
+        galleries = galleries?
+            .FindAll(x => x.IsInvisible == false);
 
-        return galleries.FindAll(x => x.IsInvisible == false);
+        return galleries;
     }
 }

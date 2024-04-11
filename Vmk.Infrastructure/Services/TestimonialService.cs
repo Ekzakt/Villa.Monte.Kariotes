@@ -19,20 +19,19 @@ public class TestimonialService : ITestimonialService
 
     public async Task<List<Testimonal>?> GetAllAsync(CancellationToken cancellationToken = default)
     {
-       var testimonials = await _fileReader.GetDataAsync<List<Testimonal>>(DATA_FILE_NAME, cancellationToken);
+        var testimonials = await _fileReader.GetDataAsync<List<Testimonal>>(DATA_FILE_NAME, cancellationToken);
 
-       return testimonials;
+        testimonials = testimonials?
+            .OrderByDescending(x => x.DateWritten)
+            .ToList();
+
+        return testimonials;
     }
 
     public async Task<List<Testimonal>?> GetVisibleAsync(CancellationToken cancellationToken = default)
     {
         var testimonals = await GetAllAsync(cancellationToken);
 
-        if (testimonals is null)
-        {
-            return null;
-        }
-
-        return testimonals.FindAll(x => x.IsInvisible == false);
+        return testimonals?.FindAll(x => x.IsInvisible == false);
     }
 }
