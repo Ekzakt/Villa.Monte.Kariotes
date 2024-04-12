@@ -1,8 +1,10 @@
-﻿namespace Vmk.Application.Models;
+﻿using Vmk.Application.Contracts;
+
+namespace Vmk.Application.Models;
 
 #nullable disable
 
-public class Testimonal
+public class Testimonal : AbstractModel
 {
     public Guid Id { get; set; } = Guid.NewGuid();
 
@@ -14,5 +16,4 @@ public class Testimonal
 
     public string Content { get; set; }
 
-    public bool IsInvisible { get; set; }
 }

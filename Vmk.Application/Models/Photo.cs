@@ -1,8 +1,10 @@
-﻿namespace Vmk.Application.Models;
+﻿using Vmk.Application.Contracts;
+
+namespace Vmk.Application.Models;
 
 #nullable disable
 
-public class Photo
+public class Photo : AbstractModel
 {
     public int Id { get; set; }
 
@@ -11,10 +13,6 @@ public class Photo
     public string OriginalFileName { get; set; }
 
     public string Description { get; set; }
-
-    public bool IsInvisible { get; set; }
-
-    public int SortNumber { get; set; } = 1000;
 
     public string FileName => $"{RootName}.jpg";
 
