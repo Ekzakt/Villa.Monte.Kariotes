@@ -18,7 +18,6 @@ a {
     color: #0092cc;
     text-decoration: none;
 }
-
     a:hover {
         color: #37b3ed;
         text-decoration: none;
@@ -629,49 +628,24 @@ section {
     border-left: 2px solid #1f5297;
     position: relative;
 }
-
-    .your-stay .your-stay-item h4 {
-        line-height: 18px;
-        font-size: 18px;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-family: "Poppins", sans-serif;
-        color: #050d18;
-        margin-bottom: 10px;
+    .your-stay ul {
+        list-style: none;
+        padding: 0;
     }
-
-    .your-stay .your-stay-item h5 {
-        font-size: 16px;
-        background: #e4edf9;
-        padding: 5px 15px;
-        display: inline-block;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-
-    .your-stay .your-stay-item ul {
-        padding-left: 20px;
-    }
-
-        .your-stay .your-stay-item ul li {
+        .your-stay ul li {
             padding-bottom: 10px;
         }
+            .your-stay ul li i {
+                font-size: 32px;
+                margin-right: 5px;
+                color: #0092cc;
+                line-height: 0;
+            }
+            .your-stay ul li p {
+                margin-left: 42px;
+            }
 
-    .your-stay .your-stay-item:last-child {
-        padding-bottom: 0;
-    }
-
-    .your-stay .your-stay-item::before {
-        content: "";
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        border-radius: 50px;
-        left: -9px;
-        top: 0;
-        background: #fff;
-        border: 2px solid #1f5297;
-    }
+        
 
 
 /*--------------------------------------------------------------
