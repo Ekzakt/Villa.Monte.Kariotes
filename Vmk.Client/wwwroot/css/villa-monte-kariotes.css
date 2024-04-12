@@ -418,13 +418,13 @@ section {
         max-width: 200px;
     }
 
+    
     .reservations .reservations-btn {
         background-color: green;
         font-weight: 500;
         font-size: 16px;
         letter-spacing: 1px;
-        display: inline-flex;
-        padding: 4px 16px;
+        padding: 4px 20px;
         border-radius: 4px;
         transition: 0.5s;
         margin-top: 10px;
@@ -434,10 +434,16 @@ section {
     }
         .reservations .reservations-btn i {
             font-size: 2.2rem;
-            padding: 5px 5px;
+            margin-top: 5px;
+            padding-right: 5px;
+        }
+        .reservations .reservations-btn span.name {
+            margin-top: 11px;
         }
         .reservations .reservations-btn span.phone{
-            padding-top: 10px;
+            display: block;
+            margin-top: 7px;
+            padding-bottom: 5px;
         }
         .reservations .reservations-btn:hover {
             background: #0092cc;
@@ -617,7 +623,6 @@ section {
 .your-stay .your-stay-title {
     font-size: 26px;
     font-weight: 700;
-    margin-top: 20px;
     margin-bottom: 20px;
     color: #050d18;
 }
@@ -633,6 +638,7 @@ section {
         padding: 0;
     }
         .your-stay ul li {
+            margin-top: 15px;
             padding-bottom: 10px;
         }
             .your-stay ul li i {
@@ -642,10 +648,10 @@ section {
                 line-height: 0;
             }
             .your-stay ul li p {
-                margin-left: 42px;
-            }
-
-        
+                margin-left: 50px;
+                margin-top: -40px;
+                margin-right: 50px;
+            }        
 
 
 /*--------------------------------------------------------------
