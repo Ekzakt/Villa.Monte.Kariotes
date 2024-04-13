@@ -82,11 +82,6 @@ h6 {
     overflow-y: auto;
 }
 
-    #header .profile img {
-        padding: 18px 15px;
-        display: block;
-    }
-
     #header .profile h1 {
         font-size: 24px;
         margin: 0;
@@ -103,24 +98,17 @@ h6 {
             text-decoration: none;
         }
 
-    #header .profile .social-links a {
-        font-size: 18px;
-        display: inline-block;
-        background: #212431;
-        color: #fff;
-        line-height: 1;
-        padding: 8px 0;
-        margin-right: 4px;
-        border-radius: 50%;
-        text-align: center;
-        width: 36px;
-        height: 36px;
-        transition: 0.3s;
+    #header .profile .social-links{
+        margin-top: 32px;
     }
 
+    #header .profile img {
+        margin: 0 7px;
+    }
+        #header .profile img.booking {
+            margin-top: 0.28rem;
+        }
         #header .profile .social-links a:hover {
-            background: #0092cc;
-            color: #fff;
             text-decoration: none;
         }
 
@@ -624,9 +612,9 @@ section {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #050d18;
+    color: #173b6c;
+    line-height: 35px
 }
-
 .your-stay .your-stay-item {
     padding: 0 0 20px 20px;
     margin-top: -2px;
@@ -651,8 +639,12 @@ section {
                 margin-left: 50px;
                 margin-top: -40px;
                 margin-right: 50px;
-            }        
-
+            }
+.your-stay .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+}
 
 /*--------------------------------------------------------------
 # Testimonials

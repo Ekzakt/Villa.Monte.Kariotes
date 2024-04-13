@@ -15,6 +15,7 @@ public class Program
         builder.Services.AddScoped<IFileReader, FileReader>();
         builder.Services.AddScoped<IGalleryService, GalleryService>();
         builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+        builder.Services.AddScoped<IDosAndDontsService, DosAndDontsService>();
 
         var app = builder.Build();
 

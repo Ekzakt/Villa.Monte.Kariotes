@@ -1,13 +1,12 @@
 ﻿using Microsoft.Extensions.Logging;
 using Vmk.Application.Contracts;
 using Vmk.Application.Models;
+using Vmk.Infrastructure.Constants;
 
 namespace Vmk.Infrastructure.Services;
 
 public class GalleryService : IGalleryService
 {
-    private const string DATA_FILE_NAME = "galleries-data.json";
-
     private readonly ILogger<GalleryService> _logger;
     private readonly IFileReader _fileReader;
 
@@ -23,7 +22,7 @@ public class GalleryService : IGalleryService
 
     public async Task<List<Gallery>?> GatAllAsync(CancellationToken cancellationToken = default)
     {
-        var galleries = await _fileReader.GetDataAsync<List<Gallery>>(DATA_FILE_NAME);
+        var galleries = await _fileReader.GetDataAsync<List<Gallery>>(DataFilePaths.GALLERIES);
 
         galleries = galleries?
             .OrderBy(x => x.SortNumber)

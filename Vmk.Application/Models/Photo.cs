@@ -16,5 +16,5 @@ public class Photo : AbstractModel
 
     public string FileName => $"{RootName}.jpg";
 
-    public string FileNameSquare => $"{RootName}-sq.jpg";
+    public string FileNameSquare => $"{RootName}.jpg";
 }

@@ -21,7 +21,7 @@
     "Name": "Exterior",
     "Description": null,
     "IsInvisible": false,
-    "SortNumber": 1000,
+    "SortNumber": 1010,
     "Photos": [
       {
         "Id": 2001,
@@ -38,7 +38,7 @@
     "Name": "Samothrace",
     "Description": null,
     "IsInvisible": false,
-    "SortNumber": 1000,
+    "SortNumber": 1020,
     "Photos": [
       {
         "Id": 3001,
