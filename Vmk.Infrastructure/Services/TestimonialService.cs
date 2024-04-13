@@ -1,15 +1,15 @@
 ﻿using Microsoft.Extensions.Logging;
 using Vmk.Application.Contracts;
 using Vmk.Application.Models;
+using Vmk.Infrastructure.Constants;
 
 namespace Vmk.Infrastructure.Services;
 
 public class TestimonialService : ITestimonialService
 {
-    private const string DATA_FILE_NAME = "testimonials-data.json";
-
     private readonly ILogger<GalleryService> _logger;
     private readonly IFileReader _fileReader;
+
 
     public TestimonialService(ILogger<GalleryService> logger, IFileReader fileReader)
     {
@@ -17,9 +17,10 @@ public class TestimonialService : ITestimonialService
         _fileReader = fileReader ?? throw new ArgumentNullException(nameof(logger));  
     }
 
+
     public async Task<List<Testimonal>?> GetAllAsync(CancellationToken cancellationToken = default)
     {
-        var testimonials = await _fileReader.GetDataAsync<List<Testimonal>>(DATA_FILE_NAME, cancellationToken);
+        var testimonials = await _fileReader.GetDataAsync<List<Testimonal>>(DataFilePaths.TESTIMONIALS, cancellationToken);
 
         testimonials = testimonials?
             .OrderByDescending(x => x.DateWritten)
@@ -27,6 +28,7 @@ public class TestimonialService : ITestimonialService
 
         return testimonials;
     }
+
 
     public async Task<List<Testimonal>?> GetVisibleAsync(CancellationToken cancellationToken = default)
     {

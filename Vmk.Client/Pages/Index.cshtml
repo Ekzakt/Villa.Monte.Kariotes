@@ -6,6 +6,8 @@
 
     var galleries = ViewData["Galleries"] as List<Gallery>;
     var testimonials = ViewData["Testimonials"] as List<Testimonal>;
+    var dos = ViewData["Dos"] as List<DosAndDonts>;
+    var donts = ViewData["Donts"] as List<DosAndDonts>;
 }
 
 
@@ -192,13 +194,16 @@
     <div class="container" data-aos="zoom-in">
         <div class="text-center">
             <h2>Make your reservation now!</h2>
-            <p>Villa Monte Kariotes is popular. Make your reservation by calling or chatting to your hosts Christine or Barbara. 
-                They will be happy to assist you.</p>
+            <p>
+                Villa Monte Kariotes is popular.
+                Make your reservation by calling or chatting to your hosts Christine or Barbara. 
+                They will be happy to assist you. Please tap or click the buttons below to initiate WhatsApp directly.
+            </p>
         </div>
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row mt-5 justify-content-center">
                 <div class="col-6 text-end">
-                    <a class="btn reservations-btn align-items-center">
+                    <a href="https://wa.me/306976419329" title="Call or chat to Christine" class="btn reservations-btn align-items-center">
                         <span class="ms-2 rounded-5 d-flex align-items-start justify-content-center">
                             <i class="bx bxl-whatsapp"></i>
                             <span class="name">Christine</span>
@@ -207,7 +212,7 @@
                     </a>
                 </div>
                 <div class="col-6 text-start">
-                    <a class="btn reservations-btn align-items-center">
+                    <a href="https://wa.me/306977220523" title="Call or chat to Barbara" class="btn reservations-btn align-items-center">
                         <span class="ms-2 rounded-5 d-flex align-items-start justify-content-center">
                             <i class="bx bxl-whatsapp"></i>
                             <span class="name">Barbara</span>
@@ -278,86 +283,37 @@
 
         <div class="section-title">
             <h2>Your stay</h2>
-            <p>We strive to ensure your stay is truly unforgettable. While we trust you'll treat our property with the same care as your own, we'd like to highlight a few guidelines: </p>
-            <p></p>
+            <p>We strive to ensure your stay is truly unforgettable. While we trust you'll treat our property with the same care as your own, we'd like to highlight a few guidelines:</p>
         </div>
 
         <div class="row">
             <div class="col-lg-6 mb-4" data-aos="fade-up">
                 <h3 class="your-stay-title">Do's</h3>
                 <ul>
-                    <li>
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <p>
-                            For the safety of your children, we kindly ask that you supervise them closely near the swimming pool. We cannot be held responsible for any accidents that may occur.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <p>
-                            Respect the tranquility of our neighbors by keeping noise levels down, especially during late hours.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <p>
-                            Conserve energy by turning off lights and appliances when not in use.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <p>
-                            Make use of the provided amenities responsibly and report any damages or malfunctions promptly.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-up"></i>
-                        <p>
-                            Relax, unwind, and savor your time at Villa Monte Kariotes.
-                        </p>
-                    </li>
+                    @foreach(var item in dos ?? [])
+                    {
+                        <li>
+                            <i class="@item.IconCssClass"></i>
+                            <p>
+                                @item.Description
+                            </p>
+                        </li>
+                    }
                 </ul>
             </div>
 
             <div class="col-lg-6" data-aos="fade-up">
                 <h3 class="your-stay-title">Dont's</h3>
                 <ul>
-                    <li>
-                        <i class="bi bi-hand-thumbs-down"></i>
-                        <p>
-                            Smoking indoors is not permitted.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-down"></i>
-                        <p>
-                            Dispose of cigarette butts responsibly; please avoid littering the garden.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-down"></i>
-                        <p>
-                            Do not tamper with the cleaning and filtering system of the swimming pool; it's maintained regularly.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-down"></i>
-                        <p>
-                            Pets are not allowed on the beds.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-down"></i>
-                        <p>
-                            Please refrain from rearranging furniture or decorations without prior approval.
-                        </p>
-                    </li>
-                    <li>
-                        <i class="bi bi-hand-thumbs-down"></i>
-                        <p>
-                            Keep the property secure by locking doors and windows when leaving.
-                        </p>
-                    </li>
+                    @foreach (var item in donts ?? [])
+                    {
+                        <li>
+                            <i class="@item.IconCssClass"></i>
+                            <p>
+                                @item.Description
+                            </p>
+                        </li>
+                    }
                 </ul>
             </div>
 
@@ -417,7 +373,7 @@
                     <div class="address">
                         <i class="bi bi-geo-alt"></i>
                         <h4>Location:</h4>
-                        <p>Kariotes 75, 68002 Samothrace, Greece</p>
+                        <p>Kato Kariotes 75, 68002 Samothrace, Greece</p>
                     </div>
 
                     <div class="email">

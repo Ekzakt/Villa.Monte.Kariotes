@@ -2,13 +2,12 @@
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 using Vmk.Application.Contracts;
+using Vmk.Infrastructure.Constants;
 
 namespace Vmk.Infrastructure.Services;
 
 public class FileReader : IFileReader
 {
-    private const string ROOT_DATA_PATH = "wwwroot/data";
-
     private readonly ILogger<FileReader> _logger;
     private readonly IFileProvider _fileProvider;
 
@@ -24,10 +23,11 @@ public class FileReader : IFileReader
 
     public async Task<TData?> GetDataAsync<TData>(string filePath, CancellationToken cancellationToken = default) where TData : class
     {
-        var fileInfo = _fileProvider.GetFileInfo(Path.Combine(ROOT_DATA_PATH, filePath));
+        var fileInfo = _fileProvider.GetFileInfo(filePath);
 
         if (!fileInfo.Exists)
         {
+            _logger.LogError("The file {FilePath} could not be found. A null value is returned.", filePath);
             return null;
         }
 
@@ -40,7 +40,7 @@ public class FileReader : IFileReader
         }
         catch (Exception ex)
         {
-            _logger.LogWarning(ex, "Error while retrieving galleries data.");
+            _logger.LogWarning(ex, "Error while retrieving data from {FilePath}. A null value is returned.", filePath);
             return null;
         }
     }
