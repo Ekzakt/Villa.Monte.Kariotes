@@ -6,8 +6,149 @@
     "CopyRight": "&copy; Villa Monte Kariotes",
     "IsInvisible": false,
     "IsActive": true,
-    "SortNumber": 1000,
-    "Photos": []
+    "SortNumber": 2000,
+    "Photos": [
+      {
+        "Id": 1001,
+        "Filename": "interior-first-floor-01.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1002,
+        "Filename": "interior-first-floor-02.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1003,
+        "Filename": "interior-first-floor-03.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1004,
+        "Filename": "interior-first-floor-04.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1005,
+        "Filename": "interior-first-floor-bathroom-01.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1006,
+        "Filename": "interior-first-floor-bathroom-02.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1007,
+        "Filename": "interior-first-floor-bathroom-03.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1008,
+        "Filename": "interior-first-floor-bedroom-01.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1009,
+        "Filename": "interior-first-floor-bedroom-02.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1010,
+        "Filename": "interior-first-floor-bedroom-03.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1011,
+        "Filename": "interior-first-floor-bedroom-04.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1012,
+        "Filename": "interior-ground-floor-bathroom-01.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 930
+      },
+      {
+        "Id": 1013,
+        "Filename": "interior-ground-floor-bathroom-02.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 940
+      },
+      {
+        "Id": 1014,
+        "Filename": "interior-ground-floor-bedroom-1-01.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 900
+      },
+      {
+        "Id": 1015,
+        "Filename": "interior-ground-floor-bedroom-1-02.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 910
+      },
+      {
+        "Id": 1016,
+        "Filename": "interior-ground-floor-bedroom-2-01.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 920
+      },
+      {
+        "Id": 1017,
+        "Filename": "interior-kitchen-01.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1000
+      },
+      {
+        "Id": 1018,
+        "Filename": "interior-kitchen-02.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 895
+      },
+      {
+        "Id": 1019,
+        "Filename": "interior-living-room-01.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 890
+      },
+      {
+        "Id": 1020,
+        "Filename": "interior-living-room-02.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 880
+      }
+    ]
   },
   {
     "Id": "exterior",
@@ -15,28 +156,133 @@
     "Description": null,
     "CopyRight": "&copy; Villa Monte Kariotes",
     "IsInvisible": false,
-    "SortNumber": 1010,
+    "SortNumber": 1000,
     "Photos": [
       {
         "Id": 2001,
         "Filename": "exterior-garden-01.jpg",
         "Description": "",
         "IsInvisible": false,
-        "SortNumber": 1000
+        "SortNumber": 2000
       },
       {
         "Id": 2002,
         "Filename": "exterior-garden-02.jpg",
         "Description": "",
         "IsInvisible": false,
-        "SortNumber": 1000
+        "SortNumber": 2000
       },
       {
         "Id": 2003,
         "Filename": "exterior-garden-03.jpg",
         "Description": "",
         "IsInvisible": false,
-        "SortNumber": 1000
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2004,
+        "Filename": "exterior-ground-floor-terrace-01.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2005,
+        "Filename": "exterior-ground-floor-terrace-02.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2006,
+        "Filename": "exterior-ground-floor-terrace-03.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 1900
+      },
+      {
+        "Id": 2007,
+        "Filename": "exterior-ground-floor-terrace-04.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2008,
+        "Filename": "exterior-ground-floor-terrace-05.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2009,
+        "Filename": "exterior-house-01.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2010,
+        "Filename": "exterior-house-02.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2011,
+        "Filename": "exterior-house-03.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2012,
+        "Filename": "exterior-swimming-pool-01.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2013,
+        "Filename": "exterior-swimming-pool-02.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 1990
+      },
+      {
+        "Id": 2014,
+        "Filename": "exterior-swimming-pool-03.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2015,
+        "Filename": "exterior-swimming-pool-04.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2016,
+        "Filename": "exterior-swimming-pool-05.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2017,
+        "Filename": "exterior-swimming-pool-06.jpg",
+        "Description": "",
+        "IsInvisible": false,
+        "SortNumber": 2000
+      },
+      {
+        "Id": 2018,
+        "Filename": "exterior-swimming-pool-07.jpg",
+        "Description": "",
+        "IsInvisible": true,
+        "SortNumber": 2000
       }
     ]
   },
@@ -45,8 +291,8 @@
     "Name": "Samothrace",
     "Description": null,
     "CopyRight": "&copy; Villa Monte Kariotes",
-    "IsInvisible": false,
-    "SortNumber": 1020,
+    "IsInvisible": true,
+    "SortNumber": 3000,
     "Photos": []
   }
 ]
