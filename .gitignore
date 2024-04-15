@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Vmk.Client/appsettings.Development.json
+/Vmk.Client/appsettings.Development.json
