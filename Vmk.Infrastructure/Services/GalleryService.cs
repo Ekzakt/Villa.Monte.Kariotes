@@ -40,6 +40,15 @@ public class GalleryService : IGalleryService
         galleries = galleries?
             .FindAll(x => x.IsInvisible == false);
 
+        foreach(var gallery in galleries ?? [])
+        {
+            gallery.Photos = gallery.Photos
+                .FindAll(x => x.IsInvisible == false)
+                .OrderBy(x => x.SortNumber)
+                    .ThenBy(x => x.Filename)
+                .ToList();
+        }
+
         return galleries;
     }
 }

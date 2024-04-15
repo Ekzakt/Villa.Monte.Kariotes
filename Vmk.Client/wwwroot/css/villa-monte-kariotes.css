@@ -388,7 +388,6 @@ section {
     background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/villa-monte-kariotes-reservations-bg-01.jpg") bottom center;
     overflow-x: hidden;
     padding: 60px 0;
-    background-color: blue;
 }
 
     .reservations h2 {
@@ -516,7 +515,7 @@ section {
             text-align: center;
             background: rgba(20, 157, 221, 0.75);
             transition: 0.3s;
-            width: 50%;
+            width: 100%;
         }
 
             .gallery .gallery-wrap .gallery-links a:hover {
@@ -605,6 +604,13 @@ section {
             padding: 0;
         }
 
+.ginner-container .gslide-description {
+    background-color: #0092cc;
+    background-color: rgba(0, 146, 204, 0.95);
+}
+.gslide-title {
+    color: #ffffff !important;
+}
 /*--------------------------------------------------------------
 # Your Stay
 --------------------------------------------------------------*/

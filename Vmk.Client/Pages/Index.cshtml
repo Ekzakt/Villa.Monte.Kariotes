@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Villa Monte Kariotes";
 
+    var options = ViewData["BunnyCdnOptions"] as BunnyCdnOptions;
     var galleries = ViewData["Galleries"] as List<Gallery>;
     var testimonials = ViewData["Testimonials"] as List<Testimonal>;
     var dos = ViewData["Dos"] as List<DosAndDonts>;
@@ -45,7 +46,8 @@
 
         <div class="row">
             <div class="col-lg-4" data-aos="fade-right">
-                <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+                @* <img src="assets/img/profile-img.jpg" class="img-fluid" alt=""> *@
+                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCybMx6tjZzxeTjUHf17wLFiqbxUjsTOj4&q=Samothrace,Greece&zoom=5frameborder=0" style="border:0; width: 100%; height: 100%;" allowfullscreen></iframe>
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                 <h3>Samothrace</h3>
@@ -136,7 +138,7 @@
             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="accomodation-box">
                     <i class="bx bxs-hot"></i>
-                    <p>A built-in <strong>barbequeue</strong> is available on the main terrace.</p>
+                    <p>A built-in <strong>barbecue</strong> is available on the main terrace.</p>
                 </div>
             </div>
 
@@ -243,7 +245,7 @@
                     <li data-filter="*" class="filter-active">All</li>
                     @foreach (var gallery in galleries ?? [])
                     {
-                        <li data-filter=".filter-@gallery.DataFilterName">@gallery.Name</li>
+                        <li data-filter=".filter-@gallery.DataFilterCssName">@gallery.Name</li>
                     }
                 </ul>
             </div>
@@ -255,23 +257,16 @@
             {
                 foreach(var photo in gallery.Photos ?? [])
                 {
-                    if (photo.IsInvisible)
-                    {
-                        continue;
-                    }
-                    
-                    <div class="col-lg-4 col-md-6 gallery-item filter-@gallery.DataFilterName">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-@gallery.DataFilterCssName">
                         <div class="gallery-wrap">
-                            <img src="img/gallery/@photo.FileNameSquare" class="img-fluid" alt="">
+                            <img src="@($"{options?.Uri}/{options?.BaseLocation}/{photo.Filename}?class={options?.ThumbnailCssClass}")" class="img-fluid" alt="">
                             <div class="gallery-links">
-                                <a href="img/gallery/@photo.FileName" data-gallery="galleryGallery" class="gallery-lightbox" title="@photo.Description (#@photo.Id)"><i class="bx bx-plus"></i></a>
+                                <a href="@($"{options?.Uri}/{options?.BaseLocation}/{photo.Filename}")" data-gallery="galleryGallery" class="gallery-lightbox" title="@gallery.CopyRight @photo.Description (Id: #@photo.Id)"><i class="bx bx-plus"></i></a>
                             </div>
                         </div>
                     </div>
                 }
             }
-            
-
     </div>
 
 </section><!-- End Gallery Section -->
@@ -385,10 +380,12 @@
                     <div class="phone">
                         <i class="bi bi-phone"></i>
                         <h4>Call:</h4>
-                        <p>+1 5589 55488 55s</p>
+                        <p>
+                            +30 697 6419329 / +30 697 7220523
+                        </p>
                     </div>
 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                    <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCybMx6tjZzxeTjUHf17wLFiqbxUjsTOj4&q=Villa+Monte+Kariotes,Samothrace,Greece&zoom=14frameborder=0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
                 </div>
 
             </div>

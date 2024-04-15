@@ -10,6 +10,8 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.AddVmkOptions();
+
         builder.Services.AddRazorPages();
         builder.Services.AddFileProvider();
         builder.Services.AddScoped<IFileReader, FileReader>();

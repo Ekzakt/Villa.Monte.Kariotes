@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using Vmk.Application.Contracts;
+﻿using Vmk.Application.Contracts;
 
 namespace Vmk.Application.Models;
 
@@ -13,7 +12,11 @@ public class Gallery : AbstractModel
 
     public string Description { get; set; }
 
-    public List<Photo> Photos { get; set; } = new();
+    public string CopyRight { get; set; }
 
-    public string DataFilterName => Id.ToLower() ?? throw new ArgumentNullException(nameof(Id));
+    public List<Photo> Photos { get; set; } = [];
+
+    public bool IsActive { get; set; }
+
+    public string DataFilterCssName => Id.ToLower() ?? throw new ArgumentNullException(nameof(Id));
 }
