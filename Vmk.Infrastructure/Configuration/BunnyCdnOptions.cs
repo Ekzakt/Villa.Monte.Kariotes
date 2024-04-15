@@ -4,7 +4,7 @@
 
 public class BunnyCdnOptions
 {
-    public Uri Uri { get; init; }
+    public string Uri { get; init; }
 
     public string BaseLocation { get; init; }
 
