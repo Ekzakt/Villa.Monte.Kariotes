@@ -4,6 +4,7 @@
 @{
     ViewData["Title"] = "Villa Monte Kariotes";
 
+    var options = ViewData["BunnyCdnOptions"] as BunnyCdnOptions;
     var galleries = ViewData["Galleries"] as List<Gallery>;
     var testimonials = ViewData["Testimonials"] as List<Testimonal>;
     var dos = ViewData["Dos"] as List<DosAndDonts>;
@@ -136,7 +137,7 @@
             <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="accomodation-box">
                     <i class="bx bxs-hot"></i>
-                    <p>A built-in <strong>barbequeue</strong> is available on the main terrace.</p>
+                    <p>A built-in <strong>barbecue</strong> is available on the main terrace.</p>
                 </div>
             </div>
 
@@ -243,7 +244,7 @@
                     <li data-filter="*" class="filter-active">All</li>
                     @foreach (var gallery in galleries ?? [])
                     {
-                        <li data-filter=".filter-@gallery.DataFilterName">@gallery.Name</li>
+                        <li data-filter=".filter-@gallery.DataFilterCssName">@gallery.Name</li>
                     }
                 </ul>
             </div>
@@ -255,23 +256,16 @@
             {
                 foreach(var photo in gallery.Photos ?? [])
                 {
-                    if (photo.IsInvisible)
-                    {
-                        continue;
-                    }
-                    
-                    <div class="col-lg-4 col-md-6 gallery-item filter-@gallery.DataFilterName">
+                    <div class="col-lg-4 col-md-6 gallery-item filter-@gallery.DataFilterCssName">
                         <div class="gallery-wrap">
-                            <img src="img/gallery/@photo.FileNameSquare" class="img-fluid" alt="">
+                            <img src="@($"{options?.Uri}/{options?.BaseLocation}/{photo.Filename}?class={options?.ThumbnailCssClass}")" class="img-fluid" alt="">
                             <div class="gallery-links">
-                                <a href="img/gallery/@photo.FileName" data-gallery="galleryGallery" class="gallery-lightbox" title="@photo.Description (#@photo.Id)"><i class="bx bx-plus"></i></a>
+                                <a href="@($"{options?.Uri}/{options?.BaseLocation}/{photo.Filename}")" data-gallery="galleryGallery" class="gallery-lightbox" title="@gallery.CopyRight @photo.Description (Id: #@photo.Id)"><i class="bx bx-plus"></i></a>
                             </div>
                         </div>
                     </div>
                 }
             }
-            
-
     </div>
 
 </section><!-- End Gallery Section -->
