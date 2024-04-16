@@ -3,7 +3,7 @@
     "Id": "interior",
     "Name": "Interior",
     "Description": null,
-    "CopyRight": "&copy; Villa Monte Kariotes",
+    "CopyRight": "&copy; Copyright Villa Monte Kariotes",
     "IsInvisible": false,
     "IsActive": true,
     "SortNumber": 2000,
@@ -154,7 +154,7 @@
     "Id": "exterior",
     "Name": "Exterior",
     "Description": null,
-    "CopyRight": "&copy; Villa Monte Kariotes",
+    "CopyRight": "&copy; Copyright Villa Monte Kariotes",
     "IsInvisible": false,
     "SortNumber": 1000,
     "Photos": [
@@ -290,7 +290,7 @@
     "Id": "samothrace",
     "Name": "Samothrace",
     "Description": null,
-    "CopyRight": "&copy; Villa Monte Kariotes",
+    "CopyRight": "&copy; Copyright Villa Monte Kariotes",
     "IsInvisible": true,
     "SortNumber": 3000,
     "Photos": []
