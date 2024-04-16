@@ -19,9 +19,9 @@ public class DosAndDontsService : IDosAndDontsService
     }
 
 
-    public async Task<List<DosAndDonts>?> GatAllAsync(CancellationToken cancellationToken = default)
+    public async Task<List<DoAndDont>?> GatAllAsync(CancellationToken cancellationToken = default)
     {
-        var dosAndDonts = await _fileReader.GetDataAsync<List<DosAndDonts>>(DataFilePaths.DOS_AND_DONTS);
+        var dosAndDonts = await _fileReader.GetDataAsync<List<DoAndDont>>(DataFilePaths.DOS_AND_DONTS);
 
         dosAndDonts = dosAndDonts?
             .OrderBy(x => x.IsDoNot)
@@ -32,7 +32,7 @@ public class DosAndDontsService : IDosAndDontsService
     }
 
 
-    public async Task<List<DosAndDonts>?> GetVisibleAsync(CancellationToken cancellationToken = default)
+    public async Task<List<DoAndDont>?> GetVisibleAsync(CancellationToken cancellationToken = default)
     {
         var dosanddonts = await GatAllAsync(cancellationToken);
 

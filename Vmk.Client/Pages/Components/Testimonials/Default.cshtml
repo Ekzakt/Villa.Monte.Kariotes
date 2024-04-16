@@ -1,0 +1,37 @@
+﻿@model TestimonialsModel
+
+@{
+    var testimonials = Model.Testimonials;
+}
+
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Testimonials</h2>
+            <p>Discover why guests love staying with us! With a stellar rating of 4.9 on Booking.com, we're proud to offer an exceptional vacation experience. But don't just take our word for it—read what our guests have to say. Here are a few snippets from our glowing reviews:</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                @foreach (var testimonial in testimonials ?? [])
+                {
+                    <div class="swiper-slide">
+                        <div class="testimonial-item" data-aos="fade-up">
+                            <p>
+                                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                @testimonial.Content
+                                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                            </p>
+                            <h3>@testimonial.Name (@testimonial.CountryOfOrigin)</h3>
+                            <h4>@testimonial.DateWritten.Year</h4>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+
+</section>

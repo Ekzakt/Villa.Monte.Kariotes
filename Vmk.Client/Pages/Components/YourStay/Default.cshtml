@@ -1,0 +1,52 @@
+﻿@model YourStayModel
+
+@{
+    var dos = Model.Dos ?? [];
+    var donts = Model.Donts ?? [];
+}
+
+<section id="your-stay" class="your-stay">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Your Stay</h2>
+            <p>We strive to ensure your stay is truly unforgettable. While we trust you'll treat our property with the same care as your own, we'd like to highlight a few guidelines:</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 mb-4" data-aos="fade-up">
+                <h3 class="your-stay-title">Do's</h3>
+                <ul>
+                    @foreach (var item in dos ?? [])
+                    {
+                        <li>
+                            <i class="@item.IconCssClass"></i>
+                            <p>
+                                @item.Description
+                            </p>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up">
+                <h3 class="your-stay-title">Dont's</h3>
+                <ul>
+                    @foreach (var item in donts ?? [])
+                    {
+                        <li>
+                            <i class="@item.IconCssClass"></i>
+                            <p>
+                                @item.Description
+                            </p>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

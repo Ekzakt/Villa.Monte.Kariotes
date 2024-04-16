@@ -11,8 +11,4 @@
     <ProjectReference Include="..\Vmk.Infrastructure\Vmk.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
-
 </Project>
