@@ -4,7 +4,7 @@ namespace Vmk.Application.Models;
 
 #nullable disable
 
-public class DosAndDonts : AbstractModel
+public class DoAndDont : AbstractModel
 {
     public string IconCssClass { get; set; }
 

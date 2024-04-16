@@ -4,7 +4,7 @@ namespace Vmk.Application.Contracts;
 
 public interface IDosAndDontsService
 {
-    Task<List<DosAndDonts>?> GatAllAsync(CancellationToken cancellationToken = default);
+    Task<List<DoAndDont>?> GatAllAsync(CancellationToken cancellationToken = default);
 
-    Task<List<DosAndDonts>?> GetVisibleAsync(CancellationToken cancellationToken = default);
+    Task<List<DoAndDont>?> GetVisibleAsync(CancellationToken cancellationToken = default);
 }
