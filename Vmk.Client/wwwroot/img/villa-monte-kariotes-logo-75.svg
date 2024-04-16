@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg328"
+   inkscape:export-filename="apple-touch-icon.png"
+   inkscape:export-xdpi="45.720001"
+   inkscape:export-ydpi="45.720001"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="villa-monte-kariotes-logo-75.svg"
+   inkscape:dataloss="true"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview330"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.76078844"
+     inkscape:cx="267.48566"
+     inkscape:cy="140.64357"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1072"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs325" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0;stroke-dasharray:none"
+       id="rect1113"
+       width="100"
+       height="100"
+       x="-1.4210855e-14"
+       y="0"
+       inkscape:label="Background"
+       inkscape:export-filename="apple-touch-icon.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#0092cc;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none"
+       id="circle6712"
+       cx="50"
+       cy="50"
+       inkscape:label="Number-Circle"
+       r="50" />
+    <g
+       aria-label="75"
+       id="text6748"
+       style="font-size:3.8862px;font-family:Leelawadee;-inkscape-font-specification:'Leelawadee, Normal';text-align:center;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:0;stroke-dasharray:none"
+       transform="matrix(14.941036,0,0,14.941036,-816.36164,-1429.6423)"
+       inkscape:label="Number">
+      <path
+         d="m 59.859212,99.537796 q 0,0.199244 -0.06831,0.360536 -0.06831,0.161288 -0.195448,0.277048 -0.125239,0.11575 -0.303609,0.17837 -0.178371,0.0626 -0.39659,0.0626 -0.379512,0 -0.563575,-0.11386 v -0.330173 q 0.277043,0.178373 0.56737,0.178373 0.148009,0 0.265658,-0.0436 0.119546,-0.0436 0.203039,-0.12144 0.08349,-0.0778 0.127136,-0.187858 0.04554,-0.110059 0.04554,-0.24099 0,-0.265658 -0.178371,-0.415565 -0.17837,-0.151805 -0.518033,-0.151805 -0.05503,0 -0.115751,0.0019 -0.06072,0.0019 -0.121444,0.0057 -0.06072,0.0019 -0.119546,0.0057 -0.05693,0.0038 -0.104366,0.0095 l 0.09298,-1.364345 h 1.258082 v 0.280839 h -0.988628 l -0.05503,0.798872 q 0.06072,-0.0038 0.129034,-0.0057 0.06831,-0.0038 0.121444,-0.0038 0.216322,0 0.387102,0.05693 0.17078,0.05693 0.288429,0.16319 0.119546,0.104366 0.180268,0.258068 0.06262,0.151804 0.06262,0.34156 z"
+         style="fill:#ffffff;stroke:none;stroke-width:0;stroke-dasharray:none"
+         id="path953"
+         inkscape:label="Number-5" />
+      <path
+         d="m 57.842107,97.828096 q -0.06262,0.108161 -0.151805,0.269453 -0.08729,0.161293 -0.185961,0.362434 -0.09867,0.201141 -0.201141,0.432643 -0.102468,0.231503 -0.191653,0.478185 -0.08919,0.246683 -0.157498,0.500956 -0.06641,0.252373 -0.09678,0.497163 h -0.33397 q 0.03416,-0.24289 0.104365,-0.495266 0.07211,-0.254273 0.161293,-0.49716 0.09108,-0.244785 0.191653,-0.470595 0.100571,-0.225809 0.195449,-0.415565 0.09488,-0.189756 0.172678,-0.33397 0.0797,-0.146112 0.127136,-0.227707 h -1.364345 v -0.280839 h 1.730574 z"
+         style="font-size:3.8862px;font-family:Leelawadee;-inkscape-font-specification:'Leelawadee, Normal';text-align:center;text-anchor:middle;fill:#ffffff;stroke:none;stroke-width:0;stroke-dasharray:none"
+         id="path951"
+         inkscape:label="Number-7" />
+    </g>
+  </g>
+</svg>
