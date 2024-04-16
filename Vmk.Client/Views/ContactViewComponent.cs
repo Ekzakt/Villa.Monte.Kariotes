@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Vmk.Client.Models;
 
 namespace Vmk.Client.Views;
 
@@ -8,6 +9,6 @@ public class ContactViewComponent : ViewComponent
     {
         await Task.CompletedTask;
 
-        return View();
+        return View(new ContactModel());
     }
 }
