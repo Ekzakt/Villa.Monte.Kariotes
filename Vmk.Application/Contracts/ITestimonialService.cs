@@ -4,7 +4,7 @@ namespace Vmk.Application.Contracts;
 
 public interface ITestimonialService
 {
-    Task<List<Testimonal>?> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<List<Testimonal>?> GetAllAsync(bool forceReload = false, CancellationToken cancellationToken = default);
 
-    Task<List<Testimonal>?> GetVisibleAsync(CancellationToken cancellation = default);
+    Task<List<Testimonal>?> GetVisibleAsync(bool forceReload = false, CancellationToken cancellation = default);
 }

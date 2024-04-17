@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function () {
+$(function () {
     "use strict";
 
     /**
@@ -239,4 +239,68 @@
         })
     });
 
-})()
+    /**
+    * ContactForm validation
+    */
+    let validator = $('form.needs-validation')
+        .jbvalidator({
+            errorMessage: true,
+            successClass: true,
+            language: '../assets/vendors/jbvalidator/lang/en.json'
+        });
+
+    /**
+     * ContactForm submission
+     */
+    $("#contactSubmit").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $.ajax({
+            type: "POST",
+            url: "/Index?handler=SubmitChat",
+            beforeSend: function (xhr) {
+                if (validator.checkAll() > 0) {
+                    xhr.abort();
+                    return;
+                }
+                $('.loading').toggle();
+                $('.contactSubmit').toggle();
+                xhr.setRequestHeader("RequestVerificationToken", $('input:hidden[name="__RequestVerificationToken"]').val());
+            },
+            data: {
+                "ContactModel": {
+                    "Name": $('#contactName').val(),
+                    "Email": $('#contactEmail').val(),
+                    "Subject": $('#contactSubject').val(),
+                    "Message": $('#contactMessage').val()
+                }
+            },
+            success: function (response) {
+                $('#contact-form')[0].reset();
+                $('#contact-form').find('.is-valid, .is-invalid').removeClass('is-valid is-invalid');
+                $('.loading').toggle();
+                $('.sent-message').toggle();
+                setTimeout(function () {
+                    $('.sent-message').toggle();
+                    $('.contactSubmit').toggle();
+                }, 5000);
+            },
+            failure: function (response) {
+                $('.loading').toggle();
+                $('.error-message').toggle();
+                setTimeout(function () {
+                    $('.error-message').toggle();
+                    $('.contactSubmit').toggle();
+                }, 5000);
+            },
+            error: function (response) {
+                $('.loading').toggle();
+                $('.error-message').toggle();
+                setTimeout(function () {
+                    $('.error-message').toggle();
+                    $('.contactSubmit').toggle();
+                }, 5000);
+            }
+        });
+    });
+});

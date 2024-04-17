@@ -853,7 +853,7 @@ section {
             display: none;
             color: #fff;
             background: #ed3c0d;
-            text-align: left;
+            text-align: center;
             padding: 15px;
             font-weight: 600;
         }
@@ -913,7 +913,7 @@ section {
             padding: 10px 15px;
         }
 
-        .contact .contact-form button[type=submit] {
+        .contact .contact-form button[type=submit]{
             background: #0092cc;
             border: 0;
             padding: 10px 24px;

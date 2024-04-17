@@ -1,27 +1,24 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Vmk.Application.Contracts;
+using Vmk.Client.Models;
 
 namespace Vmk.Client.Pages
 {
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
-        private readonly ITestimonialService _testimonialService;
-
+        
         public IndexModel(
-            ILogger<IndexModel> logger,
-            ITestimonialService testimonialService)
+            ILogger<IndexModel> logger)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
-            _testimonialService = testimonialService ?? throw new ArgumentNullException(nameof(testimonialService));
         }
 
-
-        public async Task OnGet()
+        public async Task<IActionResult> OnPostSubmitChatAsync(ContactModel contactModel)
         {
-            var testimonials = await _testimonialService.GetVisibleAsync();
+            await Task.Delay(1500);
 
-            ViewData["Testimonials"] = testimonials ?? [];
+            return new OkResult();
         }
     }
 }
