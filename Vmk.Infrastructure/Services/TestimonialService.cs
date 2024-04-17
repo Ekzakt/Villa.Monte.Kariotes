@@ -18,7 +18,7 @@ public class TestimonialService : ITestimonialService
     }
 
 
-    public async Task<List<Testimonal>?> GetAllAsync(CancellationToken cancellationToken = default)
+    public async Task<List<Testimonal>?> GetAllAsync(bool forceReload = false, CancellationToken cancellationToken = default)
     {
         var testimonials = await _fileReader.GetDataAsync<List<Testimonal>>(DataFilePaths.TESTIMONIALS, cancellationToken);
 
@@ -30,9 +30,9 @@ public class TestimonialService : ITestimonialService
     }
 
 
-    public async Task<List<Testimonal>?> GetVisibleAsync(CancellationToken cancellationToken = default)
+    public async Task<List<Testimonal>?> GetVisibleAsync(bool forceReload = false, CancellationToken cancellationToken = default)
     {
-        var testimonals = await GetAllAsync(cancellationToken);
+        var testimonals = await GetAllAsync(forceReload, cancellationToken);
 
         return testimonals?.FindAll(x => x.IsInvisible == false);
     }

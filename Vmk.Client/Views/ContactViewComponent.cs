@@ -11,4 +11,12 @@ public class ContactViewComponent : ViewComponent
 
         return View(new ContactModel());
     }
+
+    public async Task<IViewComponentResult> OnPostAsync()
+    {
+        await Task.CompletedTask;
+
+        return View(new ContactModel());
+
+    }
 }
