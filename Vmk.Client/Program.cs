@@ -1,5 +1,12 @@
+using Ekzakt.EmailSender.Smtp.Configuration;
+using Ekzakt.EmailTemplateProvider.Io.Configuration;
+using Ekzakt.FileManager.AzureBlob.Configuration;
 using Vmk.Application.Contracts;
 using Vmk.Client.Configuration;
+using Vmk.Infrastructure.BackgroundServices;
+using Vmk.Infrastructure.Constants;
+using Vmk.Infrastructure.Queueing;
+using Vmk.Infrastructure.ScopedServices;
 using Vmk.Infrastructure.Services;
 
 namespace Vmk.Client;
@@ -10,7 +17,9 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.AddVmkOptions();
+        builder.Services.AddEkzaktFileManagerAzure();
+        builder.Services.AddEkzaktEmailTemplateProviderIo();
+        builder.Services.AddEkzaktSmtpEmailSender();
 
         builder.Services.AddRazorPages();
         builder.Services.AddFileProvider();
@@ -18,6 +27,16 @@ public class Program
         builder.Services.AddScoped<IGalleryService, GalleryService>();
         builder.Services.AddScoped<ITestimonialService, TestimonialService>();
         builder.Services.AddScoped<IDosAndDontsService, DosAndDontsService>();
+        builder.Services.AddScoped<IQueueService, QueueService>();
+
+        builder.Services.AddHostedService<ContactFormQueueBgService>();
+        builder.Services.AddHostedService<EmailBgService>();
+        builder.Services.AddKeyedScoped<IScopedService, ContactFormService>(ProcessingServiceKeys.CONTACT_FORM);
+        builder.Services.AddKeyedScoped<IScopedService, EmailService>(ProcessingServiceKeys.EMAILS);
+
+        builder.AddVmkOptions();
+        builder.AddAzureClientServices();
+        builder.AddAzureKeyVault();
 
         var app = builder.Build();
 

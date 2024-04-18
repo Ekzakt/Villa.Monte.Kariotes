@@ -1,0 +1,18 @@
+{
+  "CultureName": "en-us",
+  "TemplateName": "contact",
+  "EmailInfos": [
+    {
+      "RecipientType": "admin",
+      "Email": {
+        "Subject": "[ContactForm] Villa Monte Kariotes by {{ContactName}}",
+        "Tos": [
+          {
+            "Address": "mail@ericjansen.com",
+            "Name": "Eric Jansen"
+          }
+        ]
+      }
+    }
+  ]
+}

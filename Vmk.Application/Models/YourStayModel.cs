@@ -1,8 +1,6 @@
-﻿using Vmk.Application.Models;
+﻿#nullable disable
 
-#nullable disable
-
-namespace Vmk.Client.Models
+namespace Vmk.Application.Models
 {
     public class YourStayModel
     {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Vmk.Client.Models;
+namespace Vmk.Application.Models;
 
 #nullable disable
 
@@ -10,7 +10,7 @@ public class ContactModel
 
     public string Email { get; set; }
 
-    public string Subject {  get; set; }
+    public string Subject { get; set; }
 
     public string Message { get; set; }
 }
