@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Vmk.Application.Contracts;
-using Vmk.Client.Models;
+using Vmk.Application.Models;
 
 namespace Vmk.Client.Views;
 
