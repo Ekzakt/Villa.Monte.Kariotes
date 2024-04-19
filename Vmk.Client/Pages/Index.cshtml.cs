@@ -1,3 +1,4 @@
+using Ekzakt.Utilities.Helpers;
 using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
@@ -54,13 +55,15 @@ namespace Vmk.Client.Pages
                     return new OkResult();
                 }
 
-                return new BadRequestResult();
+                throw new ArgumentException("qdsmfkjkqdsf");
+
+                //return new BadRequestResult();
             }
             catch (Exception ex) 
             {
                 _logger.LogError("Error submitting contact form. Exception: {Exception}", ex);
-               
-                return new BadRequestResult();
+
+                return new BadRequestObjectResult(ex.Message);
             }
         }
     }
