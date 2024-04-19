@@ -292,7 +292,6 @@ $(function () {
                     $('.error-message').toggle();
                     $('.contactSubmit').toggle();
                 }, 5000);
-                alert(response.statusText);
             },
             error: function (response) {
                 $('.loading').toggle();
@@ -301,7 +300,6 @@ $(function () {
                     $('.error-message').toggle();
                     $('.contactSubmit').toggle();
                 }, 5000);
-                alert(response.statusText);
             }
         });
     });

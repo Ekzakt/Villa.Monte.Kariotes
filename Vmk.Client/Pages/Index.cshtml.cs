@@ -55,9 +55,7 @@ namespace Vmk.Client.Pages
                     return new OkResult();
                 }
 
-                throw new ArgumentException("qdsmfkjkqdsf");
-
-                //return new BadRequestResult();
+                return new BadRequestResult();
             }
             catch (Exception ex) 
             {
