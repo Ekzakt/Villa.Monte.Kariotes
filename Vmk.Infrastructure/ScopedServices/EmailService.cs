@@ -61,7 +61,7 @@ public class EmailService : IScopedService
 
             await ProcessMessagesAsync(messages);
 
-            _logger.LogInformation("Executing {ServiceName} #{Count} - Messages read: {MessageCount} - Next execution in {Delay} ms.", nameof(ContactFormService), count, messages?.Count ?? 0, delay);
+            _logger.LogInformation("Executing {ServiceName} #{Count} - Messages read: {MessageCount} - Next execution in {Delay} ms.", nameof(EmailService), count, messages?.Count ?? 0, delay);
 
             await Task.Delay(delay, cancellationToken);
         }
