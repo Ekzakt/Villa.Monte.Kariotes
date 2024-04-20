@@ -9,4 +9,6 @@ public static class DataFilePaths
     public static string TESTIMONIALS => Path.Combine(ROOT, "testimonials-data.json");
 
     public static string DOS_AND_DONTS => Path.Combine(ROOT, "dosanddonts-data.json");
+
+    public static string FAQS => Path.Combine(ROOT, "faqs-data.json");
 }

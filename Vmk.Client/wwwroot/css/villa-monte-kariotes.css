@@ -754,6 +754,24 @@ section {
     }
 
 
+/*--------------------------------------------------------------
+# Faq's
+--------------------------------------------------------------*/
+.faq .accordion{
+}
+    .faq .accordion .accordion-item,
+    .faq .accordion .accordion-button {
+        border: none !important;
+        border-radius: 0 !important;
+        background: inherit;
+        box-shadow: unset;
+    }
+.faq .accordion-item h2 a{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
 
 /*--------------------------------------------------------------
 # Contact
