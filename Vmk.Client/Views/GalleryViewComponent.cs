@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Vmk.Application.Contracts;
-using Vmk.Client.Pages;
 using Vmk.Infrastructure.Configuration;
 
 namespace Vmk.Client.Views;
@@ -10,7 +9,8 @@ public class GalleryViewComponent : ViewComponent
 {
     private readonly ILogger<GalleryViewComponent> _logger;
     private readonly IGalleryService _galleryService;
-    private readonly BunnyCdnOptions _options;
+    private readonly BunnyCdnOptions _bunnyOptions;
+    private readonly GalleryOptions _galleryOptions;
 
     public GalleryViewComponent(
         ILogger<GalleryViewComponent> logger, 
@@ -19,12 +19,14 @@ public class GalleryViewComponent : ViewComponent
     {
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         _galleryService = galleryService ?? throw new ArgumentNullException(nameof(galleryService));
-        _options = options?.Value.BunnyCdn ?? throw new AbandonedMutexException(nameof(options));
+        _bunnyOptions = options?.Value.BunnyCdn ?? throw new ArgumentNullException(nameof(options));
+        _galleryOptions = options?.Value.Gallery ?? throw new ArgumentNullException(nameof(options));
     }
 
     public async Task<IViewComponentResult> InvokeAsync()
     {
-        ViewData["BunnyCdnOptions"] = _options;
+        ViewData["BunnyCdnOptions"] = _bunnyOptions;
+        ViewData["GalleryOptions"] = _galleryOptions;
 
         var galleries = await _galleryService.GetVisibleAsync();
 

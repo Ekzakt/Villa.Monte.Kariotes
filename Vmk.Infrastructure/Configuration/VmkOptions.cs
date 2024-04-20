@@ -8,6 +8,8 @@ public class VmkOptions
 
     public BunnyCdnOptions BunnyCdn { get; init; }
 
+    public GalleryOptions Gallery { get; init; }
+
     public QueueNamesOptions QueueNames { get; init; } = new();
 
     public StorageBaseLocationOptions BaseLocations { get; init; } = new();
