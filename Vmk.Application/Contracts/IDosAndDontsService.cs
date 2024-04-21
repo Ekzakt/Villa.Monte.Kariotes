@@ -1,4 +1,4 @@
-﻿using Vmk.Application.Models;
+﻿using Vmk.Application.Models.Domain;
 
 namespace Vmk.Application.Contracts;
 
