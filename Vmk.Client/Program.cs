@@ -27,7 +27,6 @@ public class Program
         builder.Services.AddScoped<IFileReader, FileReader>();
         builder.Services.AddScoped<IGalleryService, GalleryService>();
         builder.Services.AddScoped<ITestimonialService, TestimonialService>();
-        builder.Services.AddScoped<IDosAndDontsService, DosAndDontsService>();
         builder.Services.AddScoped<IFaqService, FaqService>();
         builder.Services.AddScoped<IAccomodationsService, AccomodationService>();
         builder.Services.AddScoped<IQueueService, QueueService>();
