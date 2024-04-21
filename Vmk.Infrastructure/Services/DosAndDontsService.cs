@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Vmk.Application.Contracts;
-using Vmk.Application.Models;
+using Vmk.Application.Models.Domain;
 using Vmk.Infrastructure.Constants;
 
 namespace Vmk.Infrastructure.Services;

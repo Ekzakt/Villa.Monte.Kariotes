@@ -1,6 +1,6 @@
 ﻿using Vmk.Application.Contracts;
 
-namespace Vmk.Application.Models;
+namespace Vmk.Application.Models.Domain;
 
 #nullable disable
 
