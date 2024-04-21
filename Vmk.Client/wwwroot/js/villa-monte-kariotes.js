@@ -303,4 +303,15 @@ $(function () {
             }
         });
     });
+
+    let elVmkEmail = $('.vmkEmail');
+
+    if (elVmkEmail) {
+        let href = elVmkEmail.attr('href');
+        let mailTo = href.split(':')[0];
+        let base64 = href.split(':')[1];
+        let email = atob(base64);
+        elVmkEmail.attr('href', mailTo + ':' + email);
+        elVmkEmail.text(email);
+    }
 });
