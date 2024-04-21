@@ -206,6 +206,15 @@ h6 {
         left: 0;
     }
 
+/*--------------------------------------------------------------
+# GDPR Consent Section
+--------------------------------------------------------------*/
+.gdpr-consent {
+    text-align: center;
+    color: #fff;
+    background-color: #000000;
+    display: none;
+}
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -788,10 +797,10 @@ section {
 }
 
 .faq .accordion-item {
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
 }
     .faq .accordion-item .accordion-body {
-        padding: 0px 0 10px 47px
+        padding: 0 47px 0 47px
     }
 
 

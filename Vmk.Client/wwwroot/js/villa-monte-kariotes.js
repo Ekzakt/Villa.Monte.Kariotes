@@ -242,7 +242,7 @@ $(function () {
     /**
     * ContactForm validation
     */
-    let validator = $('form.needs-validation')
+    let validator = $('form.contact-form')
         .jbvalidator({
             errorMessage: true,
             successClass: true,
@@ -304,14 +304,48 @@ $(function () {
         });
     });
 
-    let elVmkEmail = $('.vmkEmail');
 
-    if (elVmkEmail) {
-        let href = elVmkEmail.attr('href');
-        let mailTo = href.split(':')[0];
-        let base64 = href.split(':')[1];
-        let email = atob(base64);
-        elVmkEmail.attr('href', mailTo + ':' + email);
-        elVmkEmail.text(email);
+    /**
+     * Email obfuscator
+     */
+    const obfuscator = {
+        obfuscate: function (el) {
+            if (el) {
+
+                let mailto = el.attr('href');
+                let email = atob(mailto);
+
+                el.attr('href', 'mailTo:' + email);
+                el.text(email);
+            }
+        }
     }
+    obfuscator.obfuscate($('.mailto'));
+});
+
+
+$(function () {
+
+    const GDPR_ACCEPTED = 'gdpr_accepted';
+
+    var gdprElement = $('#gdpr-consent');
+
+    if (!gdprElement) {
+        return;
+    }
+
+    var gdprAccepted = Cookies.get(GDPR_ACCEPTED);
+
+    if (!gdprAccepted) {
+        gdprElement.slideDown();
+    }
+
+    $('#accept-btn').on('click', function () {
+        gdprElement.slideUp();
+        Cookies.set(GDPR_ACCEPTED, 'true', { expires: 1 });
+    });
+
+    $('#reject-btn').on('click', function () {
+        gdprElement.slideUp();
+    });
 });
