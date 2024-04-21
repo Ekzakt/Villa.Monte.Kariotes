@@ -38,7 +38,7 @@
                         </h2>
                         <div id="accordionFaqPanel-@itemNo.ToString()" class="accordion-collapse collapse@(showCssClass)">
                             <div class="accordion-body">
-                                @faq.Answer
+                                @Html.Raw(faq.Answer)
                             </div>
                         </div>
                     </div>
