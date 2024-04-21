@@ -759,18 +759,38 @@ section {
 --------------------------------------------------------------*/
 .faq .accordion{
 }
-    .faq .accordion .accordion-item,
-    .faq .accordion .accordion-button {
-        border: none !important;
-        border-radius: 0 !important;
-        background: inherit;
-        box-shadow: unset;
-    }
+.faq .accordion .accordion-item,
+.faq .accordion .accordion-button {
+    border: none !important;
+    border-radius: 0 !important;
+    background: inherit;
+    box-shadow: unset;
+    padding-left: 0;
+}
 .faq .accordion-item h2 a{
     cursor: pointer;
     font-weight: bold;
 }
+.faq .accordion-item .accordion-header {
+     padding-bottom: 0
+}
+.faq .accordion-item .accordion-header .accordion-button:hover {
+    color: #0092cc;
+}
 
+.faq .accordion-item .accordion-header .accordion-button i {
+    font-size: 32px;
+    margin-right: 16px;
+    color: #0092cc;
+    line-height: 0;
+}
+
+.faq .accordion-item {
+    margin-bottom: 1rem;
+}
+    .faq .accordion-item .accordion-body {
+        padding: 0px 0 10px 47px
+    }
 
 
 /*--------------------------------------------------------------

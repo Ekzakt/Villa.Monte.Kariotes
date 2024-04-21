@@ -4,6 +4,7 @@
     var faqs = Model.Faqs ?? [];
 }
 
+<!-- ======= Faq Section ======= -->
 <section id="faq" class="faq">
 
     <div class="container">
@@ -17,7 +18,6 @@
         </div>
 
         <div class="accordion" id="accordionFaq">
-
             @{
                 var itemNo = 0;
                 var isExpanded = false;
@@ -34,12 +34,12 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <a class="accordion-button @collapseCssClass" data-bs-toggle="collapse" data-bs-target="#accordionFaqPanel-@itemNo.ToString()" aria-expanded="@isExpanded.ToString().ToLower()" aria-controls="accordionFaqPanel-@itemNo.ToString()">
-                                @faq.Question
+                                <i class="bi bi-question-circle"></i>@faq.Question
                             </a>
                         </h2>
                         <div id="accordionFaqPanel-@itemNo.ToString()" class="accordion-collapse collapse@(showCssClass)">
                             <div class="accordion-body">
-                                @faq.Answer
+                                @Html.Raw(faq.Answer)
                             </div>
                         </div>
                     </div>
@@ -50,3 +50,4 @@
     </div>
 
 </section>
+<!-- End Faq Section -->
