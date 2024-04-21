@@ -1,14 +1,46 @@
 [
   {
+    "Question": "What languages do you speak for communication?",
+    "Answer": "Our team is proficient in Greek, English, French, and Dutch, ensuring effective communication for all guests."
+  },
+  {
     "Question": "How do I book Villa Monte Kariotes?",
-    "Answer": "The easiest way is to <a href=\"https://www.booking.com/hotel/gr/villa-monte-kariotes.en-gb.html\" title=\"Villa Monte Kariotes\">Booking.com</a>."
+    "Answer": "To secure your stay at Villa Monte Kariotes, please feel free to contact us directly via the provided <a href=\"#reservations\" title=\"Reservations\">contact details</a>. Additionally, you can make reservations through the <a href=\"https://www.booking.com/hotel/gr/villa-monte-kariotes.en-gb.html\" title=\"Book Villa Monte Kariotes\" target=\"_blank\">Booking.com</a> website for added convenience."
+  },
+  {
+    "Question": "What is your cancellation policy?",
+    "Answer": "Our cancellation policy requires notice at least four weeks prior to your scheduled arrival date to receive a full refund."
+  },
+  {
+    "Question": "What is the check-in and check-out process?",
+    "Answer": "Upon your arrival at the port of Kamariotissa, you will be warmly greeted by our hosts, Christine and Barbara, who will extend a warm welcome and ensure a smooth transition to the property. Similarly, during check-out, they will assist you in departing from the property, ensuring a seamless end to your stay."
+  },
+  {
+    "Question": "What is the capacity of the rental home?",
+    "Answer": "Villa Monte Kariotes accommodates up to eight guests comfortably, offering three bedrooms with king-size beds and an additional sofa bed for added flexibility."
+  },
+  {
+    "Question": "Are there any additional fees or taxes?",
+    "Answer": "Normally, there are no additional fees or taxes associated with your stay at Villa Monte Kariotes. However, during lower seasons when heating on petrol is used, there may be additional charges."
+  },
+  {
+    "Question": "Are there any nearby attractions or points of interest?",
+    "Answer": "The island of Samothrace offers a wealth of attractions, including stunning beaches, historic landmarks, and scenic hiking trails, providing guests with a diverse range of activities to explore during their stay. Additionally, visitors can immerse themselves in the local culture by discovering charming villages and sampling delicious local cuisine at restaurants and bars."
+  },
+  {
+    "Question": "What is the nearest public transportation option?",
+    "Answer": "The property enjoys proximity to a bus stop, situated just 500 meters away, offering convenient access to all directions of the island."
+  },
+  {
+    "Question": "Are there any specific house rules that guests need to follow?",
+    "Answer": "Guests are encouraged to treat Villa Monte Kariotes with the same care and respect as they would their own home, ensuring a pleasant experience for all."
+  },
+  {
+    "Question": "Is smoking allowed in the rental home?",
+    "Answer": "While smoking is permitted on the premises, we kindly request that guests refrain from smoking indoors and dispose of cigarette butts responsibly to maintain a clean and comfortable environment for all."
   },
   {
     "Question": "Are pets allowed?",
-    "Answer": "Yes, your furry friends are allowed on the property. Even your goldfish."
-  },
-  {
-    "Question": "Is Villa Monte Kariotes child-friendly?",
-    "Answer": "Yes, of course Villa Monte Kariotes is child friendly. There's a private swimming pool for them to play in all day."
+    "Answer": "Yes, we welcome pets at Villa Monte Kariotes; however, we kindly request that they refrain from lounging on the beds for the comfort of all guests."
   }
 ]
