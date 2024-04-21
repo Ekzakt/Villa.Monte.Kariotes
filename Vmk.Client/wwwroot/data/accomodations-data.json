@@ -1,0 +1,54 @@
+{
+  "Title": "Accomodations",
+  "Descriptions": "Please find below a list of accomodations that might help you choose for Villa Monte Kariotes as your next vacation home.",
+  "Accomodations": [
+    {
+      "IconCssClass": "bx bx-wifi",
+      "Description": "Free <strong>wifi</strong> is available."
+    },
+    {
+      "IconCssClass": "bx bxs-dog",
+      "Description": "Your <strong>furry friends</strong> are more than welcome. Your goldfish too."
+    },
+    {
+      "IconCssClass": "bx bxs-sushi",
+      "Description": "<strong>Two bathrooms</strong>, one on each floor."
+    },
+    {
+      "IconCssClass": "bx bxs-bath",
+      "Description": "A <strong>hot tub</strong> on the first floor."
+    },
+    {
+      "IconCssClass": "bx bxs-shower",
+      "Description": "A <strong>walk-in shower</strong> on the ground floor."
+    },
+    {
+      "IconCssClass": "bx bxs-hot",
+      "Description": "A built-in <strong>barbecue</strong> is available on the main terrace."
+    },
+    {
+      "IconCssClass": "bx bx-swim",
+      "Description": "Your <strong>private swimmig pool</strong>, available in high season."
+    },
+    {
+      "IconCssClass": "bx bxs-tv",
+      "Description": "A <strong>smart tv</strong> in the living area."
+    },
+    {
+      "IconCssClass": "bx bxs-bowl-hot",
+      "Description": "A modern, fully equipped <strong>kitchen</strong> with dishwasher."
+    },
+    {
+      "IconCssClass": "bx bxs-bed",
+      "Description": "Three <strong>king-size beds</strong> and one sofa bed."
+    },
+    {
+      "IconCssClass": "bx bxs-car",
+      "Description": "A <strong>parking spot</strong> is available on the property."
+    },
+    {
+      "IconCssClass": "bx bxs-sun",
+      "Description": "<strong>Central heating</strong> for chillier days."
+    }
+  ]
+}

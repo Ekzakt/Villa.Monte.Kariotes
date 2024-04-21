@@ -18,6 +18,7 @@ public class FaqService : IFaqService
         _fileReader = fileReader ?? throw new ArgumentNullException(nameof(fileReader));
     }
 
+
     public async Task<List<Faq>?> GatAllAsync(CancellationToken cancellationToken = default)
     {
         var faqs = await _fileReader.GetDataAsync<List<Faq>>(DataFilePaths.FAQS);
@@ -28,6 +29,7 @@ public class FaqService : IFaqService
 
         return faqs;
     }
+
 
     public async Task<List<Faq>?> GetVisibleAsync(CancellationToken cancellationToken = default)
     {

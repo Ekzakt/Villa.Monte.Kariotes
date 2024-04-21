@@ -11,4 +11,6 @@ public static class DataFilePaths
     public static string DOS_AND_DONTS => Path.Combine(ROOT, "dosanddonts-data.json");
 
     public static string FAQS => Path.Combine(ROOT, "faqs-data.json");
+
+    public static string ACCOMODATIONS => Path.Combine(ROOT, "accomodations-data.json");
 }
