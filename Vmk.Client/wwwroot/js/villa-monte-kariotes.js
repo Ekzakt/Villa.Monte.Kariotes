@@ -304,14 +304,23 @@ $(function () {
         });
     });
 
-    let elVmkEmail = $('.vmkEmail');
 
-    if (elVmkEmail) {
-        let href = elVmkEmail.attr('href');
-        let mailTo = href.split(':')[0];
-        let base64 = href.split(':')[1];
-        let email = atob(base64);
-        elVmkEmail.attr('href', mailTo + ':' + email);
-        elVmkEmail.text(email);
+    /**
+     * Email obfuscator
+     */
+    const obfuscator = {
+        obfuscate: function (el) {
+            if (el) {
+
+                let href = el.attr('href');
+                let mailTo = href.split(':')[0];
+                let base64 = href.split(':')[1];
+                let email = atob(base64);
+
+                el.attr('href', mailTo + ':' + email);
+                el.text(email);
+            }
+        }
     }
+    obfuscator.obfuscate($('.vmkEmail'));
 });
