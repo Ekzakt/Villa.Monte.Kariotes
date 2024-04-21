@@ -242,7 +242,7 @@ $(function () {
     /**
     * ContactForm validation
     */
-    let validator = $('form.needs-validation')
+    let validator = $('form.contact-form')
         .jbvalidator({
             errorMessage: true,
             successClass: true,
