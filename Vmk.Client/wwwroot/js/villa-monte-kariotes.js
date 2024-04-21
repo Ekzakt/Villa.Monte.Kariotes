@@ -312,15 +312,13 @@ $(function () {
         obfuscate: function (el) {
             if (el) {
 
-                let href = el.attr('href');
-                let mailTo = href.split(':')[0];
-                let base64 = href.split(':')[1];
-                let email = atob(base64);
+                let mailto = el.attr('href');
+                let email = atob(mailto);
 
-                el.attr('href', mailTo + ':' + email);
+                el.attr('href', 'mailTo:' + email);
                 el.text(email);
             }
         }
     }
-    obfuscator.obfuscate($('.vmkEmail'));
+    obfuscator.obfuscate($('.mailto'));
 });
