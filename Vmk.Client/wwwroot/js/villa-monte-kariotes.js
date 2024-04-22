@@ -326,6 +326,10 @@ $(function () {
 
 $(function () {
 
+    if ($(location).attr('pathname').endsWith('/privacy')) {
+        return;
+    }
+
     const GDPR_ACCEPTED = 'gdpr_accepted';
 
     var gdprElement = $('#gdpr-consent');
