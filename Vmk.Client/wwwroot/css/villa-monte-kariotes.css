@@ -34,6 +34,13 @@ h6 {
     font-family: "Raleway", sans-serif;
 }
 
+.content h1 {
+    font-size: 3rem;
+    color: #173b6c;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -209,12 +216,6 @@ h6 {
 /*--------------------------------------------------------------
 # Error Pages
 --------------------------------------------------------------*/
-.error h1 {
-    font-size: 3rem;
-    color: #173b6c;
-    font-weight: 600;
-    margin-bottom: 2.5rem;
-}
 
 /*--------------------------------------------------------------
 # GDPR Consent Section
@@ -243,15 +244,7 @@ h6 {
 /*--------------------------------------------------------------
 # Privacy Page
 --------------------------------------------------------------*/
-.privacy h1 {
-    font-size: 3rem;
-    color: #173b6c;
-    font-weight: 600;
-    margin-bottom: 2.5rem;
-}
-.privacy h2:last-child{
-    margin-top: 4rem;
-}
+
 
 .privacy h3 {
     margin-top: 2.75rem;

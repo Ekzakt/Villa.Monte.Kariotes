@@ -5,5 +5,4 @@
 public class BunnyCdnOptions
 {
     public string Uri { get; init; }
-
 }
