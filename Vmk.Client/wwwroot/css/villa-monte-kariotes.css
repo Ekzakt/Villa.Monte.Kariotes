@@ -207,6 +207,16 @@ h6 {
     }
 
 /*--------------------------------------------------------------
+# Error Pages
+--------------------------------------------------------------*/
+.error h1 {
+    font-size: 3rem;
+    color: #173b6c;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+/*--------------------------------------------------------------
 # GDPR Consent Section
 --------------------------------------------------------------*/
 .gdpr-consent {
@@ -352,22 +362,15 @@ section {
             left: 0;
         }
 
-    .section-title p {
-        padding-bottom: 1.75rem;
+    .section-title h3 {
+        color: #173b6c;
+        font-weight: 700;
+        line-height: 3rem
     }
-        .section-title p:last-child{
-            margin-bottom: 0;
-        }
 
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
-    font-weight: 700;
-    font-size: 26px;
-    color: #173b6c;
-}
-
 .about .content ul {
     list-style: none;
     padding: 0;
@@ -392,13 +395,6 @@ section {
         color: #0092cc;
         line-height: 0;
     }
-
-.about .content p{
-    margin-bottom: 0;
-}
-.about .content p:last-child {
-    padding: 0;
-}
 
 
 /*--------------------------------------------------------------

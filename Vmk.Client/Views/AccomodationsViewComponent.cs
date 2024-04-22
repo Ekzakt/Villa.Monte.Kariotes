@@ -19,7 +19,7 @@ public class AccomodationsViewComponent : ViewComponent
     public async Task<IViewComponentResult> InvokeAsync()
     {
         var model = await _accomodationsService.GetVisibleAsync();
-        
+
         return View(model);
     }
 }
