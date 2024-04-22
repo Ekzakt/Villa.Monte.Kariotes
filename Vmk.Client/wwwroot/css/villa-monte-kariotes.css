@@ -213,8 +213,22 @@ h6 {
     text-align: center;
     color: #fff;
     background-color: #000000;
+    background-color: rgba(0,0,0, 0.9);
     display: none;
 }
+.gdpr-consent button[type=button] {
+    background: #0092cc;
+    border: 0;
+    margin: 0 5px;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+    .gdpr-consent button[type=button]:hover {
+        background: #37b3ed;
+    }
 
 /*--------------------------------------------------------------
 # Hero Section
