@@ -231,6 +231,31 @@ h6 {
     }
 
 /*--------------------------------------------------------------
+# Privacy Page
+--------------------------------------------------------------*/
+.privacy h1 {
+    font-size: 3rem;
+    color: #173b6c;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+.privacy h2:last-child{
+    margin-top: 4rem;
+}
+.privacy h3 {
+    margin-top: 2.75rem;
+    margin-bottom: 1.2rem;
+    color: #173b6c;
+}
+
+.privacy ul li::marker {
+    color: #0092cc;
+}
+.privacy ul li:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
