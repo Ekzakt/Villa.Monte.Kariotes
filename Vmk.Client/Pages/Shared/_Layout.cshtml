@@ -79,27 +79,19 @@
     <partial name="_GdprConsent" />
     <!-- End GDPR Consent -->
 
-
-    <!-- ======= Hero Section ======= -->
-@*     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container m-4" data-aos="fade-in">
-            <h1>Villa Monte Kariotes</h1>
-            <p data-aos="fade-in">Your next Greek vacation home</p>
-        </div>
-    </section> *@
-    <!-- End Hero Section -->
-
-
     <main role="main" id="main">
         @RenderBody()
     </main>
 
-
+    
     <!-- ======= Footer ======= -->
     <footer id="footer">
         <div class="container">
             <div class="copyright">
                 &copy; @DateTime.UtcNow.Year.ToString() <span>Villa Monte Kariotes</span>
+            </div>
+            <div  class="privacy">
+                <p><a href="~/privacy" title="Privacy Policy">Privacy Policy</a></p>
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->

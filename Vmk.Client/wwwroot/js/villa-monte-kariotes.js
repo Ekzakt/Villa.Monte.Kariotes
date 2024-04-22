@@ -154,9 +154,9 @@ $(function () {
                 itemSelector: '.gallery-item'
             });
 
-            let galleryFilters = select('#gallery-flters li', true);
+            let galleryFilters = select('#gallery-filters li', true);
 
-            on('click', '#gallery-flters li', function (e) {
+            on('click', '#gallery-filters li', function (e) {
                 e.preventDefault();
                 galleryFilters.forEach(function (el) {
                     el.classList.remove('filter-active');

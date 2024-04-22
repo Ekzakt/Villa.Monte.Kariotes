@@ -242,6 +242,7 @@ h6 {
 .privacy h2:last-child{
     margin-top: 4rem;
 }
+
 .privacy h3 {
     margin-top: 2.75rem;
     margin-bottom: 1.2rem;
@@ -328,7 +329,7 @@ section {
 }
 
 .section-title {
-    padding-bottom: 30px;
+    padding-bottom: 0;
 }
 
     .section-title h2 {
@@ -352,7 +353,7 @@ section {
         }
 
     .section-title p {
-        margin-bottom: 1rem;
+        padding-bottom: 1.75rem;
     }
         .section-title p:last-child{
             margin-bottom: 0;
@@ -392,8 +393,11 @@ section {
         line-height: 0;
     }
 
-.about .content p:last-child {
+.about .content p{
     margin-bottom: 0;
+}
+.about .content p:last-child {
+    padding: 0;
 }
 
 
@@ -401,12 +405,12 @@ section {
 # Accomodations
 --------------------------------------------------------------*/
 .accomodations {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
     .accomodations .accomodation-box {
-        margin: 12px 0;
-        padding: 30px;
+        margin: 10px 0;
+        padding: 40px 0 0 0;
         width: 100%;
     }
 
@@ -500,17 +504,17 @@ section {
     margin-bottom: 30px;
 }
 
-.gallery #gallery-flters {
+.gallery #gallery-filters {
     padding: 0;
     margin: 0 auto 35px auto;
     list-style: none;
     text-align: center;
-    background: #fff;
+    background: #f5f8fd;
     border-radius: 50px;
     padding: 2px 15px;
 }
 
-    .gallery #gallery-flters li {
+    .gallery #gallery-filters li {
         cursor: pointer;
         display: inline-block;
         padding: 10px 15px 8px 15px;
@@ -523,12 +527,12 @@ section {
         transition: all 0.3s ease-in-out;
     }
 
-        .gallery #gallery-flters li:hover,
-        .gallery #gallery-flters li.filter-active {
-            color: #149ddd;
+        .gallery #gallery-filters li:hover,
+        .gallery #gallery-filters li.filter-active {
+            color: #0092cc;
         }
 
-        .gallery #gallery-flters li:last-child {
+        .gallery #gallery-filters li:last-child {
             margin-right: 0;
         }
 
