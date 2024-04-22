@@ -1,6 +1,7 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Vmk.Client.Pages.Errors;
+namespace Vmk.Client.Pages.Error._404;
 
 public class IndexModel : PageModel
 {

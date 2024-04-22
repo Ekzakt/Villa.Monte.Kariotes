@@ -3,6 +3,7 @@ using Ekzakt.EmailTemplateProvider.Io.Configuration;
 using Ekzakt.FileManager.AzureBlob.Configuration;
 using Vmk.Application.Contracts;
 using Vmk.Client.Configuration;
+using Vmk.Client.Middlewares;
 using Vmk.Infrastructure.BackgroundServices;
 using Vmk.Infrastructure.Constants;
 using Vmk.Infrastructure.Queueing;
@@ -42,14 +43,24 @@ public class Program
 
         var app = builder.Build();
 
-        if (!app.Environment.IsDevelopment())
+        if (app.Environment.IsDevelopment())
         {
-            app.UseExceptionHandler("/Error");
+            app.UseExceptionHandler("/error/500");
             app.UseHsts();
         }
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
+
+        app.Use(async (context, next) =>
+        {
+            await next();
+            if (context.Response.StatusCode == 404)
+            {
+                context.Request.Path = "/error/404";
+                await next();
+            }
+        });
 
         app.UseRouting();
 
