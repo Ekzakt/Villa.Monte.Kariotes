@@ -279,9 +279,9 @@ $(function () {
                 $('#contact-form')[0].reset();
                 $('#contact-form').find('.is-valid, .is-invalid').removeClass('is-valid is-invalid');
                 $('.loading').toggle();
-                $('.sent-message').toggle();
+                $('.success-message').toggle();
                 setTimeout(function () {
-                    $('.sent-message').toggle();
+                    $('.success-message').toggle();
                     $('.contactSubmit').toggle();
                 }, 5000);
             },

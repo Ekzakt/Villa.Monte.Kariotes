@@ -953,7 +953,7 @@ section {
                 margin-top: 25px;
             }
 
-        .contact .contact-form .sent-message {
+        .contact .contact-form .success-message {
             display: none;
             color: #fff;
             background: #18d26e;
