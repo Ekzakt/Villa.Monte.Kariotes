@@ -1,0 +1,35 @@
+﻿@model AccomodationsModel
+
+@{
+    var accomodations = Model.Accomodations ?? [];
+}
+
+<!-- ======= Accomodations Section ======= -->
+<section id="accomodations" class="accomodations">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>@Model.Title</h2>
+            <p>
+                @Html.Raw(Model.Description)
+            </p>
+        </div>
+
+        <div class="row no-gutters">
+            @foreach (var accomodation in accomodations)
+            {
+                <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
+                    <div class="accomodation-box">
+                        <i class="@Html.Raw(accomodation.IconCssClass)"></i>
+                        <p>@Html.Raw(accomodation.Description)</p>
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+
+</section>
+<!-- End Accomodations Section -->

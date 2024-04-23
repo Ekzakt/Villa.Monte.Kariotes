@@ -1,34 +1,73 @@
-namespace Vmk.Client
+using Ekzakt.EmailSender.Smtp.Configuration;
+using Ekzakt.EmailTemplateProvider.Io.Configuration;
+using Ekzakt.FileManager.AzureBlob.Configuration;
+using Vmk.Application.Contracts;
+using Vmk.Client.Configuration;
+using Vmk.Client.Middlewares;
+using Vmk.Infrastructure.BackgroundServices;
+using Vmk.Infrastructure.Constants;
+using Vmk.Infrastructure.Queueing;
+using Vmk.Infrastructure.ScopedServices;
+using Vmk.Infrastructure.Services;
+
+namespace Vmk.Client;
+
+public class Program
 {
-    public class Program
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
+        var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddEkzaktFileManagerAzure();
+        builder.Services.AddEkzaktEmailTemplateProviderIo();
+        builder.Services.AddEkzaktSmtpEmailSender();
+
+        builder.Services.AddRazorPages();
+        builder.Services.AddFileProvider();
+
+        builder.Services.AddScoped<IFileReader, FileReader>();
+        builder.Services.AddScoped<IGalleryService, GalleryService>();
+        builder.Services.AddScoped<ITestimonialService, TestimonialService>();
+        builder.Services.AddScoped<IFaqService, FaqService>();
+        builder.Services.AddScoped<IAccomodationsService, AccomodationService>();
+        builder.Services.AddScoped<IQueueService, QueueService>();
+
+        builder.Services.AddHostedService<ContactFormQueueBgService>();
+        builder.Services.AddHostedService<EmailBgService>();
+        builder.Services.AddKeyedScoped<IScopedService, ContactFormService>(ProcessingServiceKeys.CONTACT_FORM);
+        builder.Services.AddKeyedScoped<IScopedService, EmailService>(ProcessingServiceKeys.EMAILS);
+
+        builder.AddVmkOptions();
+        builder.AddAzureClientServices();
+        builder.AddAzureKeyVault();
+
+        var app = builder.Build();
+
+        if (!app.Environment.IsDevelopment())
         {
-            var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-            builder.Services.AddRazorPages();
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
-
-            app.MapRazorPages();
-
-            app.Run();
+            app.UseExceptionHandler("/error/500");
+            app.UseHsts();
         }
+
+        app.UseHttpsRedirection();
+        app.UseStaticFiles();
+
+        app.Use(async (context, next) =>
+        {
+            await next();
+            if (context.Response.StatusCode == 404)
+            {
+                context.Request.Path = "/error/404";
+                await next();
+            }
+        });
+
+        app.UseRouting();
+
+        app.UseAuthorization();
+
+        app.MapRazorPages();
+
+        app.Run();
     }
 }

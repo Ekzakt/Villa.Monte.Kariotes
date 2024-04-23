@@ -1,0 +1,23 @@
+Name:
+{{ContactName}}
+
+Email:
+{{ContactEmail}}
+
+Subject:
+{{ContactSubject}}
+
+Message:
+{{ContactMessage}}
+
+IP-Address:
+{{IpAddress}}
+
+Useragent:
+{{UserAgent}}
+
+Date sent:
+{{DateSent}}
+
+Original culture name:
+{{CultureName}}

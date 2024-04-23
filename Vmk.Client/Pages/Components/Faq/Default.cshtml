@@ -1,0 +1,52 @@
+﻿@model FaqModel
+
+@{
+    var faqs = Model.Faqs ?? [];
+}
+
+<!-- ======= Faq Section ======= -->
+<section id="faq" class="faq">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+            <p>
+                Get all your questions answered quickly and conveniently.
+            </p>
+        </div>
+
+        <div class="accordion" id="accordionFaq" data-aos="fade-up">
+            @{
+                var itemNo = 0;
+                var isExpanded = false;
+                var showCssClass = string.Empty;
+                var collapseCssClass = string.Empty;
+
+                foreach (var faq in faqs)
+                {
+                    itemNo += 1;
+                    isExpanded = itemNo == 0;
+                    showCssClass = isExpanded ? " show" : string.Empty;
+                    collapseCssClass = isExpanded ? string.Empty : " collapsed";
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <a class="accordion-button @collapseCssClass" data-bs-toggle="collapse" data-bs-target="#accordionFaqPanel-@itemNo.ToString()" aria-expanded="@isExpanded.ToString().ToLower()" aria-controls="accordionFaqPanel-@itemNo.ToString()">
+                                <i class="bi bi-question-circle"></i>@faq.Question
+                            </a>
+                        </h2>
+                        <div id="accordionFaqPanel-@itemNo.ToString()" class="accordion-collapse collapse@(showCssClass)">
+                            <div class="accordion-body">
+                                @Html.Raw(faq.Answer)
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+    </div>
+
+</section>
+<!-- End Faq Section -->

@@ -6,7 +6,7 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function () {
+$(function () {
     "use strict";
 
     /**
@@ -128,22 +128,6 @@
     });
 
     /**
-     * Hero type effect
-     */
-    //const typed = select('.typed')
-    //if (typed) {
-    //    let typed_strings = typed.getAttribute('data-typed-items')
-    //    typed_strings = typed_strings.split(',')
-    //    new Typed('.typed', {
-    //        strings: typed_strings,
-    //        loop: false,
-    //        typeSpeed: 75,
-    //        backSpeed: 50,
-    //        backDelay: 2000
-    //    });
-    //}
-
-    /**
      * Skills animation
      */
     let skilsContent = select('.skills-content');
@@ -164,25 +148,25 @@
      * Porfolio isotope and filter
      */
     window.addEventListener('load', () => {
-        let portfolioContainer = select('.portfolio-container');
-        if (portfolioContainer) {
-            let portfolioIsotope = new Isotope(portfolioContainer, {
-                itemSelector: '.portfolio-item'
+        let galleryContainer = select('.gallery-container');
+        if (galleryContainer) {
+            let galleryIsotope = new Isotope(galleryContainer, {
+                itemSelector: '.gallery-item'
             });
 
-            let portfolioFilters = select('#portfolio-flters li', true);
+            let galleryFilters = select('#gallery-filters li', true);
 
-            on('click', '#portfolio-flters li', function (e) {
+            on('click', '#gallery-filters li', function (e) {
                 e.preventDefault();
-                portfolioFilters.forEach(function (el) {
+                galleryFilters.forEach(function (el) {
                     el.classList.remove('filter-active');
                 });
                 this.classList.add('filter-active');
 
-                portfolioIsotope.arrange({
+                galleryIsotope.arrange({
                     filter: this.getAttribute('data-filter')
                 });
-                portfolioIsotope.on('arrangeComplete', function () {
+                galleryIsotope.on('arrangeComplete', function () {
                     AOS.refresh()
                 });
             }, true);
@@ -191,16 +175,16 @@
     });
 
     /**
-     * Initiate portfolio lightbox 
+     * Initiate gallery lightbox 
      */
-    const portfolioLightbox = GLightbox({
-        selector: '.portfolio-lightbox'
+    const galleryLightbox = GLightbox({
+        selector: '.gallery-lightbox'
     });
 
     /**
      * Portfolio details slider
      */
-    new Swiper('.portfolio-details-slider', {
+    new Swiper('.gallery-details-slider', {
         speed: 400,
         loop: true,
         autoplay: {
@@ -222,7 +206,7 @@
         loop: true,
         autoplay: {
             delay: 5000,
-            disableOnInteraction: false
+            disableOnInteraction: true
         },
         slidesPerView: 'auto',
         pagination: {
@@ -255,4 +239,117 @@
         })
     });
 
-})()
+    /**
+    * ContactForm validation
+    */
+    let validator = $('form.contact-form')
+        .jbvalidator({
+            errorMessage: true,
+            successClass: true,
+            language: '../assets/vendors/jbvalidator/lang/en.json'
+        });
+
+    /**
+     * ContactForm submission
+     */
+    $("#contactSubmit").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $.ajax({
+            type: "POST",
+            url: "/Index?handler=SubmitChat",
+            beforeSend: function (xhr) {
+                if (validator.checkAll() > 0) {
+                    xhr.abort();
+                    return;
+                }
+                $('.loading').toggle();
+                $('.contactSubmit').toggle();
+                xhr.setRequestHeader("RequestVerificationToken", $('input:hidden[name="__RequestVerificationToken"]').val());
+            },
+            data: {
+                "ContactModel": {
+                    "Name": $('#contactName').val(),
+                    "Email": $('#contactEmail').val(),
+                    "Subject": $('#contactSubject').val(),
+                    "Message": $('#contactMessage').val()
+                }
+            },
+            success: function (response) {
+                $('#contact-form')[0].reset();
+                $('#contact-form').find('.is-valid, .is-invalid').removeClass('is-valid is-invalid');
+                $('.loading').toggle();
+                $('.success-message').toggle();
+                setTimeout(function () {
+                    $('.success-message').toggle();
+                    $('.contactSubmit').toggle();
+                }, 5000);
+            },
+            failure: function (response) {
+                $('.loading').toggle();
+                $('.error-message').toggle();
+                setTimeout(function () {
+                    $('.error-message').toggle();
+                    $('.contactSubmit').toggle();
+                }, 5000);
+            },
+            error: function (response) {
+                $('.loading').toggle();
+                $('.error-message').toggle();
+                setTimeout(function () {
+                    $('.error-message').toggle();
+                    $('.contactSubmit').toggle();
+                }, 5000);
+            }
+        });
+    });
+
+
+    /**
+     * Email obfuscator
+     */
+    const obfuscator = {
+        obfuscate: function (el) {
+            if (el) {
+
+                let mailto = el.attr('href');
+                let email = atob(mailto);
+
+                el.attr('href', 'mailTo:' + email);
+                el.text(email);
+            }
+        }
+    }
+    obfuscator.obfuscate($('.mailto'));
+});
+
+
+$(function () {
+
+    if ($(location).attr('pathname').endsWith('/privacy')) {
+        return;
+    }
+
+    const GDPR_ACCEPTED = 'gdpr_accepted';
+
+    var gdprElement = $('#gdpr-consent');
+
+    if (!gdprElement) {
+        return;
+    }
+
+    var gdprAccepted = Cookies.get(GDPR_ACCEPTED);
+
+    if (!gdprAccepted) {
+        gdprElement.slideDown();
+    }
+
+    $('#accept-btn').on('click', function () {
+        gdprElement.slideUp();
+        Cookies.set(GDPR_ACCEPTED, 'true', { expires: 1 });
+    });
+
+    $('#reject-btn').on('click', function () {
+        gdprElement.slideUp();
+    });
+});
