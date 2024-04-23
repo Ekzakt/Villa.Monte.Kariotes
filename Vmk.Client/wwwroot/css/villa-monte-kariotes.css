@@ -244,8 +244,6 @@ h6 {
 /*--------------------------------------------------------------
 # Privacy Page
 --------------------------------------------------------------*/
-
-
 .privacy h3 {
     margin-top: 2.75rem;
     margin-bottom: 1.2rem;
@@ -405,7 +403,7 @@ section {
 
     .accomodations .accomodation-box i {
         display: block;
-        font-size: 44px;
+        font-size: 32px;
         color: #0092cc;
         float: left;
         line-height: 0;
@@ -417,12 +415,12 @@ section {
         display: block;
         font-weight: 700;
         color: #050d18;
-        margin-left: 60px;
+        margin-left: 50px;
     }
 
     .accomodations .accomodation-box p {
         padding: 0;
-        margin: -20px 0 0 60px;
+        margin: -20px 0 0 50px;
         font-family: "Raleway", sans-serif;
         font-size: inherit;
         color: #122f57;
