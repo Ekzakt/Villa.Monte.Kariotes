@@ -3,7 +3,6 @@ using Ekzakt.EmailTemplateProvider.Io.Configuration;
 using Ekzakt.FileManager.AzureBlob.Configuration;
 using Vmk.Application.Contracts;
 using Vmk.Client.Configuration;
-using Vmk.Client.Middlewares;
 using Vmk.Infrastructure.BackgroundServices;
 using Vmk.Infrastructure.Constants;
 using Vmk.Infrastructure.Queueing;
