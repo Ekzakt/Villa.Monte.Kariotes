@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /Vmk.Client/appsettings.Development.json
 /Vmk.Client/appsettings.Development.json
+/Vmk.Client/wwwroot/css/villa-monte-kariotes.css
