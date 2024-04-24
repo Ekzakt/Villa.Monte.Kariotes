@@ -23,7 +23,8 @@ public class TestimonialService : ITestimonialService
         var testimonials = await _fileReader.GetDataAsync<List<Testimonal>>(DataFilePaths.TESTIMONIALS, cancellationToken);
 
         testimonials = testimonials?
-            .OrderByDescending(x => x.DateWritten)
+            .OrderBy(x => x.SortNumber)
+            .ThenByDescending(x => x.DateWritten)
             .ToList();
 
         return testimonials;
