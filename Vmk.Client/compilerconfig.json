@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/vkm.css",
+    "inputFile": "wwwroot/css/vkm.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/villa-monte-kariotes.css",
+    "inputFile": "wwwroot/css/villa-monte-kariotes.scss"
+  }
+]
