@@ -801,45 +801,26 @@ section {
 /*--------------------------------------------------------------
 # Faq's
 --------------------------------------------------------------*/
-.faq .accordion{
-}
-.faq .accordion .accordion-item,
-.faq .accordion .accordion-button {
-    border: none !important;
-    border-radius: 0 !important;
-    background: inherit;
-    box-shadow: unset;
-    padding-left: 0;
+.faq .accordion-item {
+    border: none;
 }
 .faq .accordion-button {
-    background-color: red;
-}
-.faq .accordion-item h2 a{
+    font-weight: bolder;
     cursor: pointer;
-    font-weight: bold;
+    padding: 16px 20px 16px 0;
+    background-color: inherit;
+    box-shadow: unset;
 }
-.faq .accordion-header {
-     padding-bottom: 0
-}
-.faq .accordion-button:hover {
-    color: #0092cc;
-}
-
 .faq .accordion-button i {
     font-size: 32px;
-    margin-right: 25px;
+    margin-right: 23px;
     color: #0092cc;
-    line-height: 0;
 }
-
-.faq .accordion-item {
-    margin-bottom: 15px;
+.faq .accordion-body {
+    padding-top: 0;
+    padding-right: 55px;
+    padding-left: 55px;
 }
-    .faq .accordion-body {
-        margin-left: 10px;
-        padding: 0 47px 0 47px
-    }
-
 
 /*--------------------------------------------------------------
 # Contact
