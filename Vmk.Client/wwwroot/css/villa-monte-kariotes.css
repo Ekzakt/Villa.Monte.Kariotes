@@ -397,7 +397,7 @@ section {
 # Accomodations
 --------------------------------------------------------------*/
 .accomodations {
-    padding-bottom: 50px;
+    margin: 20px 0 0 0;
 }
 
     .accomodations .accomodation-box {
@@ -425,13 +425,11 @@ section {
 
     .accomodations .accomodation-box p {
         padding: 0;
-        margin: -20px 0 0 50px;
+        margin: -15px 0 0 50px;
         font-family: "Raleway", sans-serif;
         font-size: inherit;
         color: #122f57;
     }
-
-
 /*--------------------------------------------------------------
 # Reservations
 --------------------------------------------------------------*/
@@ -813,20 +811,23 @@ section {
     box-shadow: unset;
     padding-left: 0;
 }
+.faq .accordion-button {
+    background-color: red;
+}
 .faq .accordion-item h2 a{
     cursor: pointer;
     font-weight: bold;
 }
-.faq .accordion-item .accordion-header {
+.faq .accordion-header {
      padding-bottom: 0
 }
-.faq .accordion-item .accordion-header .accordion-button:hover {
+.faq .accordion-button:hover {
     color: #0092cc;
 }
 
-.faq .accordion-item .accordion-header .accordion-button i {
+.faq .accordion-button i {
     font-size: 32px;
-    margin-right: 16px;
+    margin-right: 25px;
     color: #0092cc;
     line-height: 0;
 }
@@ -834,7 +835,8 @@ section {
 .faq .accordion-item {
     margin-bottom: 15px;
 }
-    .faq .accordion-item .accordion-body {
+    .faq .accordion-body {
+        margin-left: 10px;
         padding: 0 47px 0 47px
     }
 
