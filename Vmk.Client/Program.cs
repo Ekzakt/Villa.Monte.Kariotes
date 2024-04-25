@@ -17,6 +17,8 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.AddOpenTelemetry();
+
         builder.Services.AddEkzaktFileManagerAzure();
         builder.Services.AddEkzaktEmailTemplateProviderIo();
         builder.Services.AddEkzaktSmtpEmailSender();
