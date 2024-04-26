@@ -661,12 +661,21 @@ section {
 }
 
 .ginner-container .gslide-description {
+  font-family: "Raleway", sans-serif !important;
   background-color: #0092cc;
   background-color: rgba(0, 146, 204, 0.95);
 }
 
 .gslide-title {
   color: #ffffff !important;
+  font-weight: lighter !important;
+}
+
+.gslide-desc {
+  color: #fff !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.75rem !important;
+  font-weight: lighter !important;
 }
 
 /*--------------------------------------------------------------
