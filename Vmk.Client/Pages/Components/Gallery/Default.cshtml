@@ -39,9 +39,20 @@
                 {
                     <div class="col-lg-4 col-md-6 gallery-item filter-@gallery.DataFilterCssName">
                         <div class="gallery-wrap">
-                            <img src="@($"{bunnyOptions?.Uri}/{galleryOptions?.BaseLocation}/{photo.Filename}?class={galleryOptions?.ThumbnailCssClass}")" class="img-fluid" alt="">
+                            <img src="@($"{bunnyOptions?.Uri}/{galleryOptions?.BaseLocation}/{photo.Filename}?class={galleryOptions?.ThumbnailCssClass}")" class="img-fluid" alt="@photo.Description">
                             <div class="gallery-links">
-                                <a href="@($"{bunnyOptions?.Uri}/{galleryOptions?.BaseLocation}/{photo.Filename}")" data-gallery="galleryGallery" class="gallery-lightbox" title="@gallery.CopyRight @photo.Description (Id: #@photo.Id)"><i class="bx bx-plus"></i></a>
+                                @* <a href="@($"{bunnyOptions?.Uri}/{galleryOptions?.BaseLocation}/{photo.Filename}")"
+                                    data-gallery="galleryGallery" 
+                                    class="gallery-lightbox" 
+                                    title="@photo.Description (@gallery.CopyRight - Id: #@photo.Id)"><i class="bx bx-plus"></i></a> *@
+                                <a href="@($"{bunnyOptions?.Uri}/{galleryOptions?.BaseLocation}/{photo.Filename}")"
+                                   data-gallery="galleryGallery"
+                                   class="gallery-lightbox"
+                                   data-title="@photo.Description"
+                                   data-description="<i>@gallery.CopyRight - Photo-id: @photo.Id</i>"
+                                   data-desc-position="bottom">
+                                    <i class="bx bx-plus"></i>
+                               </a>
                             </div>
                         </div>
                     </div>

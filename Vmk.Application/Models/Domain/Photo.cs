@@ -13,4 +13,5 @@ public class Photo : AbstractModel
     public string OriginalFileName { get; set; }
 
     public string Description { get; set; }
+
 }

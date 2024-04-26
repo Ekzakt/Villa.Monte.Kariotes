@@ -161,7 +161,7 @@
       {
         "Id": 2001,
         "Filename": "exterior-garden-01.jpg",
-        "Description": "",
+        "Description": "A stunning garden view, photo taken from terrace on the first floor. Notice the Greek main land in the back.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
@@ -196,7 +196,7 @@
       {
         "Id": 2006,
         "Filename": "exterior-ground-floor-terrace-03.jpg",
-        "Description": "",
+        "Description": "A view onto the covered terrace on the ground floor. Notice the typical Greek oven on the left.",
         "IsInvisible": false,
         "SortNumber": 1900
       },
