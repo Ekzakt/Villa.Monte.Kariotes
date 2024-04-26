@@ -102,9 +102,9 @@
       {
         "Id": 1014,
         "Filename": "interior-ground-floor-bedroom-1-01.jpg",
-        "Description": "",
+        "Description": "View of the first bedroom on the ground floor, with a king-size bed.",
         "IsInvisible": false,
-        "SortNumber": 900
+        "SortNumber": 904
       },
       {
         "Id": 1015,
@@ -118,7 +118,7 @@
         "Filename": "interior-ground-floor-bedroom-2-01.jpg",
         "Description": "View of the second large bedroom on the ground floor, with a king-size bed.",
         "IsInvisible": false,
-        "SortNumber": 920
+        "SortNumber": 905
       },
       {
         "Id": 1017,
