@@ -273,6 +273,12 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+@mixin hero-text {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 0px 0px 10px #181818;
+}
+
 #hero {
     width: 100%;
     height: 100vh;
@@ -301,15 +307,17 @@ h6 {
 }
 
 #hero h1 {
+    @include hero-text;
     position: relative;
     line-height: 5rem;
     font-family: Raleway, sans-serif;
     font-weight: 500;
-    margin: 0 0 40px 0;
+    margin: 0 0 18px 0;
     font-size: 64px;
 }
 
 #hero p {
+    @include hero-text;
     display: inline-block;
     padding-bottom: 12px;
     font-size: 26px;
@@ -325,7 +333,12 @@ h6 {
 
 @media (max-width: 768px) {
     #hero h1 {
+        font-size: 55px;
         line-height: 55px;
+    }
+
+    #hero p{
+        font-size: 20px;
     }
 }
 
