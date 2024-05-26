@@ -92,14 +92,14 @@ public class QueueService : IQueueService
     }
 
 
-    public async Task UpdateMessageAsync(string queueName, string messageId, string popReceipt, double visibilityTypeOutInSeconds = 10)
+    public async Task UpdateMessageAsync(string queueName, string messageId, string popReceipt, double visibilityTimeoutInSeconds = 10)
     {
         EnsureQueueClient(queueName);
 
         await _queueClient!.UpdateMessageAsync(
             messageId,
             popReceipt,
-            visibilityTimeout: TimeSpan.FromSeconds(visibilityTypeOutInSeconds));
+            visibilityTimeout: TimeSpan.FromSeconds(visibilityTimeoutInSeconds));
     }
 
 
