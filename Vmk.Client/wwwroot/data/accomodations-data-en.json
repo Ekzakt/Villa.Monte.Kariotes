@@ -43,6 +43,10 @@
       "Description": "Three <strong>king-size beds</strong> and one sofa bed."
     },
     {
+      "IconCssClass": "bx bx-wind",
+      "Description": "<strong>Air conditioning</strong> in all sleeping rooms."
+    },
+    {
       "IconCssClass": "bx bxs-car",
       "Description": "A <strong>parking spot</strong> is available on the property."
     },
