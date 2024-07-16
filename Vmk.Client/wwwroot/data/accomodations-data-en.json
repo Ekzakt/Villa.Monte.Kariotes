@@ -44,7 +44,7 @@
     },
     {
       "IconCssClass": "bx bx-wind",
-      "Description": "Air conditioning in all sleeping rooms."
+      "Description": "<strong>Air conditioning</strong> in all sleeping rooms."
     },
     {
       "IconCssClass": "bx bxs-car",
