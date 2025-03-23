@@ -8,5 +8,6 @@ public class GalleryOptions
 
     public string ThumbnailCssClass { get; init; }
 
-    public string PreviewCssClass { get; init; }
+    public string ThumbnailFolderName { get; init; }
+
 }

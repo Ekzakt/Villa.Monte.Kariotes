@@ -10,140 +10,140 @@
     "Photos": [
       {
         "Id": 1001,
-        "Filename": "interior-first-floor-01.jpg",
+        "Filename": "interior-first-floor-01.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1002,
-        "Filename": "interior-first-floor-02.jpg",
+        "Filename": "interior-first-floor-02.webp",
         "Description": "View of the cozy loft on the second floor.",
         "IsInvisible": false,
         "SortNumber": 1000
       },
       {
         "Id": 1003,
-        "Filename": "interior-first-floor-03.jpg",
+        "Filename": "interior-first-floor-03.webp",
         "Description": "The sitting room in the loft on the first floor. The sofa is actually a sofa bed.",
         "IsInvisible": false,
         "SortNumber": 1000
       },
       {
         "Id": 1004,
-        "Filename": "interior-first-floor-04.jpg",
+        "Filename": "interior-first-floor-04.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1005,
-        "Filename": "interior-first-floor-bathroom-01.jpg",
+        "Filename": "interior-first-floor-bathroom-01.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1006,
-        "Filename": "interior-first-floor-bathroom-02.jpg",
+        "Filename": "interior-first-floor-bathroom-02.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1007,
-        "Filename": "interior-first-floor-bedroom-01.jpg",
+        "Filename": "interior-first-floor-bedroom-01.webp",
         "Description": "The king-size bed on the first floor. On the right, there's a sofa bed.",
         "IsInvisible": false,
         "SortNumber": 1000
       },
       {
         "Id": 1008,
-        "Filename": "interior-first-floor-bathroom-03.jpg",
+        "Filename": "interior-first-floor-bathroom-03.webp",
         "Description": "The bathroom on the first floor, with a large bathtub.",
         "IsInvisible": false,
         "SortNumber": 1010
       },
       {
         "Id": 1009,
-        "Filename": "interior-first-floor-bedroom-02.jpg",
+        "Filename": "interior-first-floor-bedroom-02.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1010,
-        "Filename": "interior-first-floor-bedroom-03.jpg",
+        "Filename": "interior-first-floor-bedroom-03.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1011,
-        "Filename": "interior-first-floor-bedroom-04.jpg",
+        "Filename": "interior-first-floor-bedroom-04.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1012,
-        "Filename": "interior-ground-floor-bathroom-01.jpg",
+        "Filename": "interior-ground-floor-bathroom-01.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 930
       },
       {
         "Id": 1013,
-        "Filename": "interior-ground-floor-bathroom-02.jpg",
+        "Filename": "interior-ground-floor-bathroom-02.webp",
         "Description": "A view of the walk-in shower of the bathroom on the ground floor.",
         "IsInvisible": false,
         "SortNumber": 940
       },
       {
         "Id": 1014,
-        "Filename": "interior-ground-floor-bedroom-1-01.jpg",
+        "Filename": "interior-ground-floor-bedroom-1-01.webp",
         "Description": "View of the first bedroom on the ground floor, with a king-size bed.",
         "IsInvisible": false,
         "SortNumber": 904
       },
       {
         "Id": 1015,
-        "Filename": "interior-ground-floor-bedroom-1-02.jpg",
+        "Filename": "interior-ground-floor-bedroom-1-02.webp",
         "Description": "View of the first large bedroom on the ground floor, with a king-size bed.",
         "IsInvisible": true,
         "SortNumber": 910
       },
       {
         "Id": 1016,
-        "Filename": "interior-ground-floor-bedroom-2-01.jpg",
+        "Filename": "interior-ground-floor-bedroom-2-01.webp",
         "Description": "View of the second large bedroom on the ground floor, with a king-size bed.",
         "IsInvisible": false,
         "SortNumber": 905
       },
       {
         "Id": 1017,
-        "Filename": "interior-kitchen-01.jpg",
+        "Filename": "interior-kitchen-01.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1000
       },
       {
         "Id": 1018,
-        "Filename": "interior-kitchen-02.jpg",
+        "Filename": "interior-kitchen-02.webp",
         "Description": "The well-appointed modern kitchen, equipped with all amenities.",
         "IsInvisible": false,
         "SortNumber": 895
       },
       {
         "Id": 1019,
-        "Filename": "interior-living-room-01.jpg",
+        "Filename": "interior-living-room-01.webp",
         "Description": "The sitting area in the living room: the large balcony windows in the living room bring a lot of light inside.",
         "IsInvisible": false,
         "SortNumber": 890
       },
       {
         "Id": 1020,
-        "Filename": "interior-living-room-02.jpg",
+        "Filename": "interior-living-room-02.webp",
         "Description": "The spacious living room of Villa Monte Kariotes. The opening on the right is the entrance to the kitchen, the two doors on the left are from the two large bedrooms.",
         "IsInvisible": false,
         "SortNumber": 880
@@ -160,126 +160,126 @@
     "Photos": [
       {
         "Id": 2001,
-        "Filename": "exterior-garden-01.jpg",
+        "Filename": "exterior-garden-01.webp",
         "Description": "A stunning garden view with the swimming pool. This photo was taken from the terrace on the first floor. Notice the Greek mainland in the background.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2002,
-        "Filename": "exterior-garden-02.jpg",
+        "Filename": "exterior-garden-02.webp",
         "Description": "",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2003,
-        "Filename": "exterior-garden-03.jpg",
+        "Filename": "exterior-garden-03.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
       },
       {
         "Id": 2004,
-        "Filename": "exterior-ground-floor-terrace-01.jpg",
+        "Filename": "exterior-ground-floor-terrace-01.webp",
         "Description": "Another view onto the main terrace on the ground floor.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2005,
-        "Filename": "exterior-ground-floor-terrace-02.jpg",
+        "Filename": "exterior-ground-floor-terrace-02.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
       },
       {
         "Id": 2006,
-        "Filename": "exterior-ground-floor-terrace-03.jpg",
+        "Filename": "exterior-ground-floor-terrace-03.webp",
         "Description": "A view onto the covered terrace on the ground floor. Notice the typical Greek oven on the left.",
         "IsInvisible": false,
         "SortNumber": 1900
       },
       {
         "Id": 2007,
-        "Filename": "exterior-ground-floor-terrace-04.jpg",
+        "Filename": "exterior-ground-floor-terrace-04.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
       },
       {
         "Id": 2008,
-        "Filename": "exterior-ground-floor-terrace-05.jpg",
+        "Filename": "exterior-ground-floor-terrace-05.webp",
         "Description": "Chilling on the terrace on the first floor. Enjoy the magnificent view.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2009,
-        "Filename": "exterior-house-01.jpg",
+        "Filename": "exterior-house-01.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
       },
       {
         "Id": 2010,
-        "Filename": "exterior-house-02.jpg",
+        "Filename": "exterior-house-02.webp",
         "Description": "A view onto the house, with in the background a part of the rugged Mount Fengari.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2011,
-        "Filename": "exterior-house-03.jpg",
+        "Filename": "exterior-house-03.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
       },
       {
         "Id": 2012,
-        "Filename": "exterior-swimming-pool-01.jpg",
+        "Filename": "exterior-swimming-pool-01.webp",
         "Description": "Relax by the pool, partly surrounded by olive trees.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2013,
-        "Filename": "exterior-swimming-pool-02.jpg",
+        "Filename": "exterior-swimming-pool-02.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 1990
       },
       {
         "Id": 2014,
-        "Filename": "exterior-swimming-pool-03.jpg",
+        "Filename": "exterior-swimming-pool-03.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
       },
       {
         "Id": 2015,
-        "Filename": "exterior-swimming-pool-04.jpg",
+        "Filename": "exterior-swimming-pool-04.webp",
         "Description": "All you need, don't you think? A swimming pool, a beautiful garden, and a safe place to sleep.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2016,
-        "Filename": "exterior-swimming-pool-05.jpg",
+        "Filename": "exterior-swimming-pool-05.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
       },
       {
         "Id": 2017,
-        "Filename": "exterior-swimming-pool-06.jpg",
+        "Filename": "exterior-swimming-pool-06.webp",
         "Description": "Our Greek goddess, wandering around your private swimming pool.",
         "IsInvisible": false,
         "SortNumber": 2000
       },
       {
         "Id": 2018,
-        "Filename": "exterior-swimming-pool-07.jpg",
+        "Filename": "exterior-swimming-pool-07.webp",
         "Description": "",
         "IsInvisible": true,
         "SortNumber": 2000
